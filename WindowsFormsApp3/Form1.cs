@@ -22,7 +22,7 @@ namespace WindowsFormsApp3
         //test
         //ww
 
-
+            //ww
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: このコード行はデータを 'aZUREDBDataSet1.DataExchange_Comment' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
