@@ -50,7 +50,7 @@
             // 
             editdateTimeLabel.AutoSize = true;
             editdateTimeLabel.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            editdateTimeLabel.Location = new System.Drawing.Point(22, 86);
+            editdateTimeLabel.Location = new System.Drawing.Point(22, 64);
             editdateTimeLabel.Name = "editdateTimeLabel";
             editdateTimeLabel.Size = new System.Drawing.Size(95, 18);
             editdateTimeLabel.TabIndex = 3;
@@ -60,7 +60,7 @@
             // 
             commentLabel.AutoSize = true;
             commentLabel.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            commentLabel.Location = new System.Drawing.Point(46, 156);
+            commentLabel.Location = new System.Drawing.Point(42, 134);
             commentLabel.Name = "commentLabel";
             commentLabel.Size = new System.Drawing.Size(71, 18);
             commentLabel.TabIndex = 5;
@@ -88,41 +88,47 @@
             // 
             // editdateTimeDateTimePicker
             // 
+            this.editdateTimeDateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.editdateTimeDateTimePicker.CustomFormat = "dd/MM HH:mm";
             this.editdateTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.dataExchange_CommentBindingSource, "EditdateTime", true));
             this.editdateTimeDateTimePicker.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.editdateTimeDateTimePicker.Location = new System.Drawing.Point(133, 81);
+            this.editdateTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.editdateTimeDateTimePicker.Location = new System.Drawing.Point(133, 59);
             this.editdateTimeDateTimePicker.Name = "editdateTimeDateTimePicker";
-            this.editdateTimeDateTimePicker.Size = new System.Drawing.Size(266, 25);
+            this.editdateTimeDateTimePicker.Size = new System.Drawing.Size(113, 25);
             this.editdateTimeDateTimePicker.TabIndex = 4;
+            this.editdateTimeDateTimePicker.TabStop = false;
             this.editdateTimeDateTimePicker.ValueChanged += new System.EventHandler(this.editdateTimeDateTimePicker_ValueChanged);
             // 
             // commentTextBox
             // 
             this.commentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataExchange_CommentBindingSource, "Comment", true));
             this.commentTextBox.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.commentTextBox.Location = new System.Drawing.Point(133, 156);
+            this.commentTextBox.Location = new System.Drawing.Point(133, 131);
             this.commentTextBox.Multiline = true;
             this.commentTextBox.Name = "commentTextBox";
-            this.commentTextBox.Size = new System.Drawing.Size(266, 266);
-            this.commentTextBox.TabIndex = 6;
+            this.commentTextBox.Size = new System.Drawing.Size(266, 83);
+            this.commentTextBox.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(133, 471);
+            this.button1.Location = new System.Drawing.Point(102, 279);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 84);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Save";
+            this.button1.Size = new System.Drawing.Size(186, 26);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Save and Close";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Location = new System.Drawing.Point(133, 33);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 19);
+            this.textBox1.Size = new System.Drawing.Size(113, 19);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TabStop = false;
             // 
             // label1
             // 
@@ -130,15 +136,15 @@
             this.label1.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.Location = new System.Drawing.Point(69, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Name:";
+            this.label1.Text = "User :";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 568);
+            this.ClientSize = new System.Drawing.Size(413, 415);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);

@@ -36,7 +36,8 @@ namespace WindowsFormsApp3
             
             textBox1.Text = name;
             commentTextBox.Text = textBox1.Text + ":";
-            editdateTimeDateTimePicker.Text = date;
+
+            editdateTimeDateTimePicker.Text = System.DateTime.Now.ToString();
         }
 
 
@@ -51,7 +52,8 @@ namespace WindowsFormsApp3
                 this.dataExchange_CommentBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
                 this.dataExchange_CommentTableAdapter.Update(this.aZUREDBDataSet.DataExchange_Comment);
-                MessageBox.Show("saved");
+
+                //MessageBox.Show("saved");
 
                 
                 this.Close();

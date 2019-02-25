@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
@@ -53,7 +55,20 @@ namespace WindowsFormsApp3
 
             textBox1.Text = firstdayrem;
 
+            //User Name 
+            textBox2.Text = Properties.Settings.Default.username;
+
+            //Sorting
+            Sorting();
+
+            //Timer
+            SetDisplaytime();
+
+
         }
+
+      
+
 
 
 
@@ -128,6 +143,9 @@ namespace WindowsFormsApp3
             string dtrem = dtadd2.ToString().Remove(10, 8);
             textBox1.Text = dtrem;
 
+            //Sorting
+            Sorting();
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -141,10 +159,19 @@ namespace WindowsFormsApp3
             string dtrem = dtadd2.ToString().Remove(10, 8);
             textBox1.Text = dtrem;
 
+            //Sorting
+            Sorting();
+
         }
 
 
         private void button4_Click_2(object sender, EventArgs e)
+        {
+            Sorting();
+        }
+
+
+        private void Sorting ()
         {
             //datachenagebindingsorceをソートして日付降順
             dataExchangeBindingSource2.Sort = "MonthGroup";
@@ -153,7 +180,9 @@ namespace WindowsFormsApp3
             dataExchangeBindingSource2.Filter = string.Format("Shipname like '{0:s}'", comboBox1.Text) + "AND MonthGroup = '" + textBox1.Text + "'";
 
             dataExchange_feeBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBox1.Text) + "AND MonthGroup = '" + textBox1.Text + "'";
+
         }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -292,8 +321,29 @@ namespace WindowsFormsApp3
 
         }
 
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        private void textBox2_Leave(object sender, EventArgs e)
         {
+            Properties.Settings.Default.username = textBox2.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        private void textBoxtime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            SetDisplaytime();
+        }
+
+        private void SetDisplaytime ()
+        {
+            //DateTime d = DateTime.Now;
+
+            // timeNow.Text = string.Format("{0:00}:{1:00}:{2:00}", d.Hour, d.Minute, d.Second);
+
+            timeNow.Text = DateTime.Now.ToString("G");
 
         }
     }
