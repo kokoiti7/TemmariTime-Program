@@ -19,11 +19,7 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        public void dataExchangeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-         
 
-        }
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -42,7 +38,7 @@ namespace WindowsFormsApp3
             this.dataExchange_CommentTableAdapter.Fill(this.aZUREDBDataSet1.DataExchange_Comment);
 
             
-            editdateTimeDate.Text = DateTime.Today.ToString();
+           
 
             //Textboxにロード時あらかじめ月の初めを表示させかつその月の１日目である
             DateTime dtToday = DateTime.Today;
@@ -88,7 +84,7 @@ namespace WindowsFormsApp3
                     v1 = (decimal)dataExchange_feeDataGridView.Rows[i].Cells[4].Value;
                     v2 = (decimal)dataExchange_feeDataGridView.Rows[i].Cells[5].Value;
 
-                    //feeのほうのグリッドビュアーの列(v1 + v2).ToString()1番目にv1v2を足してtost
+                    //feeのほうのグリッドビュアーの列(v1 + v2).ToString()1番目にv1v2を足してtotal
 
                     dataExchange_feeDataGridView[6, i].Value = v1 + v2;
                 }
@@ -108,9 +104,6 @@ namespace WindowsFormsApp3
         }
 
        
-
-
-
 
 
 
@@ -192,10 +185,6 @@ namespace WindowsFormsApp3
 
 
 
-
-
-
-
         private void button8_Click(object sender, EventArgs e)
         {
 
@@ -256,11 +245,6 @@ namespace WindowsFormsApp3
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         public void button13_Click(object sender, EventArgs e)
@@ -311,7 +295,7 @@ namespace WindowsFormsApp3
             dataExchange_CommentDataGridView.Refresh();
             this.dataExchange_CommentTableAdapter.Fill(this.aZUREDBDataSet1.DataExchange_Comment);
             frm3.name = textBox2.Text;
-            frm3.date = editdateTimeDate.Text;
+            frm3.date = timeNow.Text;
             frm3.Show();
 
         }
@@ -344,6 +328,31 @@ namespace WindowsFormsApp3
             // timeNow.Text = string.Format("{0:00}:{1:00}:{2:00}", d.Hour, d.Minute, d.Second);
 
             timeNow.Text = DateTime.Now.ToString("G");
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void editdateTimeDate_ValueChanged(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Sorting();
+        }
+
+        private void dataExchange_CommentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
