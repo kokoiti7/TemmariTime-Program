@@ -194,6 +194,7 @@
             this.budjetbalanceTextBox.Name = "budjetbalanceTextBox";
             this.budjetbalanceTextBox.Size = new System.Drawing.Size(200, 19);
             this.budjetbalanceTextBox.TabIndex = 69;
+            this.budjetbalanceTextBox.TextChanged += new System.EventHandler(this.budjetbalanceTextBox_TextChanged);
             // 
             // managementfeeTextBox
             // 

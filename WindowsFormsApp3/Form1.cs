@@ -103,7 +103,7 @@ namespace WindowsFormsApp3
         public static string GetBlobSasUri(CloudBlobContainer container)
         {
             //Get a reference to a blob within the container.
-            CloudBlockBlob blob = container.GetBlockBlobReference("");
+            CloudBlockBlob blob = container.GetBlockBlobReference(" ");
 
             //Get a reference to a blob within the container.
 
@@ -147,8 +147,8 @@ namespace WindowsFormsApp3
                 try
                 {
                     //forでまわしてデシマルのv1,v2に対してグリッドロウのi番目つまり行をみていっている
-                    v1 = (decimal)dataExchange_feeDataGridView.Rows[i].Cells[4].Value;
-                    v2 = (decimal)dataExchange_feeDataGridView.Rows[i].Cells[5].Value;
+                    v1 = (decimal)dataExchange_feeDataGridView[4, i].Value;
+                    v2 = (decimal)dataExchange_feeDataGridView[5, i].Value;
 
                     //feeのほうのグリッドビュアーの列(v1 + v2).ToString()1番目にv1v2を足してtotal
 
@@ -156,13 +156,13 @@ namespace WindowsFormsApp3
                 }
                 catch(NullReferenceException)
                 {
-                    MessageBox.Show("NotTotalValue");
+                    MessageBox.Show("nullです");
                 }
-                catch(InvalidCastException)
+ 
+                catch (ArgumentOutOfRangeException)
                 {
-                    MessageBox.Show("NotTotalValue");
+                    MessageBox.Show("index範囲外です");
                 }
-                
 
             }
                 
@@ -596,6 +596,42 @@ namespace WindowsFormsApp3
         private void timeNow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timeNow_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click_2(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
+
+
+            Form4 frm4 = new Form4(this);
+
+            
+            frm4.Show();
+
+
+        }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                dataExchangeBindingSource2.RemoveCurrent();
+                this.dataExchangeBindingSource2.EndEdit();
+                this.dataExchangeTableAdapter.Update(this.aZUREDBDataSet.DataExchange);
+                MessageBox.Show("deleted");
+            }
+
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Notdeletedselect");
+            }
         }
     }
 }

@@ -85,5 +85,9 @@ namespace WindowsFormsApp3
             paymentDateDateTimePicker.Value = pay;
         }
 
+        private void budjetbalanceTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

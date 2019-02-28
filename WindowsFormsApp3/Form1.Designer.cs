@@ -38,10 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dataExchangeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.aZUREDBDataSet = new WindowsFormsApp3.AZUREDBDataSet();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,10 +48,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.dataExchange_feeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchange_feeTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.TableAdapterManager();
-            this.dataExchangeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchangeTableAdapter();
-            this.ship_Master_TBTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.button12 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataExchange_CommentDataGridView = new System.Windows.Forms.DataGridView();
@@ -64,27 +57,27 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataExchange_CommentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet1 = new WindowsFormsApp3.AZUREDBDataSet1();
-            this.dataExchange_feeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataExchange_feeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataExchange_feeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aZUREDBDataSet = new WindowsFormsApp3.AZUREDBDataSet();
             this.dataExchangeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,9 +100,11 @@
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataExchange_CommentTableAdapter = new WindowsFormsApp3.AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter();
+            this.dataExchangeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.timeNow = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -122,19 +117,23 @@
             this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button11 = new System.Windows.Forms.Button();
+            this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataExchange_feeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchange_feeTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.TableAdapterManager();
+            this.dataExchangeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchangeTableAdapter();
+            this.ship_Master_TBTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
+            this.dataExchange_CommentTableAdapter = new WindowsFormsApp3.AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter();
             this.dataExchange_CommentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKDataExchangeShipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -142,20 +141,11 @@
             this.splitContainer1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataExchangeBindingSource2
-            // 
-            this.dataExchangeBindingSource2.DataMember = "DataExchange";
-            this.dataExchangeBindingSource2.DataSource = this.aZUREDBDataSet;
-            // 
-            // aZUREDBDataSet
-            // 
-            this.aZUREDBDataSet.DataSetName = "AZUREDBDataSet";
-            this.aZUREDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBox3
             // 
@@ -165,11 +155,6 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(229, 28);
             this.comboBox3.TabIndex = 1;
-            // 
-            // shipMasterTBBindingSource
-            // 
-            this.shipMasterTBBindingSource.DataMember = "Ship_Master_TB";
-            this.shipMasterTBBindingSource.DataSource = this.aZUREDBDataSet;
             // 
             // label2
             // 
@@ -188,9 +173,9 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(306, 109);
+            this.button1.Location = new System.Drawing.Point(244, 158);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 79);
+            this.button1.Size = new System.Drawing.Size(225, 27);
             this.button1.TabIndex = 7;
             this.button1.Text = "GrandTotal";
             this.button1.UseVisualStyleBackColor = true;
@@ -201,9 +186,9 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Default;
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(3, 6);
+            this.button2.Location = new System.Drawing.Point(0, 73);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(290, 80);
+            this.button2.Size = new System.Drawing.Size(223, 27);
             this.button2.TabIndex = 9;
             this.button2.Text = "NewAddItem";
             this.button2.UseVisualStyleBackColor = true;
@@ -253,63 +238,45 @@
             // 
             this.button6.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(3, 109);
+            this.button6.Location = new System.Drawing.Point(0, 158);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(292, 80);
+            this.button6.Size = new System.Drawing.Size(225, 28);
             this.button6.TabIndex = 16;
-            this.button6.Text = "SelectReset";
+            this.button6.Text = "AllRecord";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(143, 39);
+            this.button7.Location = new System.Drawing.Point(33, 210);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(102, 25);
+            this.button7.Size = new System.Drawing.Size(228, 26);
             this.button7.TabIndex = 24;
-            this.button7.Text = "Save";
+            this.button7.Text = "AddComment";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button8.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button8.Location = new System.Drawing.Point(19, 40);
+            this.button8.Location = new System.Drawing.Point(292, 211);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(102, 25);
+            this.button8.Size = new System.Drawing.Size(225, 25);
             this.button8.TabIndex = 25;
             this.button8.Text = "Removed";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // dataExchange_feeTableAdapter
-            // 
-            this.dataExchange_feeTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DataExchange_feeTableAdapter = this.dataExchange_feeTableAdapter;
-            this.tableAdapterManager.DataExchangeTableAdapter = this.dataExchangeTableAdapter;
-            this.tableAdapterManager.Ship_Master_TBTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp3.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // dataExchangeTableAdapter
-            // 
-            this.dataExchangeTableAdapter.ClearBeforeFill = true;
-            // 
-            // ship_Master_TBTableAdapter
-            // 
-            this.ship_Master_TBTableAdapter.ClearBeforeFill = true;
-            // 
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button12.Location = new System.Drawing.Point(306, 6);
+            this.button12.Location = new System.Drawing.Point(244, 73);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(292, 79);
+            this.button12.Size = new System.Drawing.Size(225, 26);
             this.button12.TabIndex = 35;
             this.button12.Text = "SelectedRemove";
             this.button12.UseVisualStyleBackColor = true;
@@ -317,11 +284,11 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Meiryo UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Location = new System.Drawing.Point(7, 60);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(432, 30);
             this.label5.TabIndex = 37;
@@ -330,7 +297,8 @@
             // dataExchange_CommentDataGridView
             // 
             this.dataExchange_CommentDataGridView.AllowUserToOrderColumns = true;
-            this.dataExchange_CommentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataExchange_CommentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataExchange_CommentDataGridView.AutoGenerateColumns = false;
             this.dataExchange_CommentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataExchange_CommentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -339,11 +307,11 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataExchange_CommentDataGridView.DataSource = this.dataExchange_CommentBindingSource1;
-            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(7, 71);
+            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(33, 248);
             this.dataExchange_CommentDataGridView.Name = "dataExchange_CommentDataGridView";
             this.dataExchange_CommentDataGridView.RowHeadersVisible = false;
             this.dataExchange_CommentDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(349, 304);
+            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(484, 106);
             this.dataExchange_CommentDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn1
@@ -395,11 +363,6 @@
             this.aZUREDBDataSet1.DataSetName = "AZUREDBDataSet1";
             this.aZUREDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataExchange_feeBindingSource1
-            // 
-            this.dataExchange_feeBindingSource1.DataMember = "DataExchange_fee";
-            this.dataExchange_feeBindingSource1.DataSource = this.aZUREDBDataSet;
-            // 
             // dataExchange_feeDataGridView
             // 
             this.dataExchange_feeDataGridView.AllowUserToAddRows = false;
@@ -411,27 +374,26 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
-            this.Total,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewCheckBoxColumn1,
-            this.dataGridViewCheckBoxColumn2,
-            this.dataGridViewTextBoxColumn20});
+            this.dataGridViewCheckBoxColumn2});
             this.dataExchange_feeDataGridView.DataSource = this.dataExchange_feeBindingSource1;
-            this.dataExchange_feeDataGridView.Location = new System.Drawing.Point(0, 255);
+            this.dataExchange_feeDataGridView.Location = new System.Drawing.Point(12, 249);
             this.dataExchange_feeDataGridView.Name = "dataExchange_feeDataGridView";
             this.dataExchange_feeDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(1284, 106);
+            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(1316, 105);
             this.dataExchange_feeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn5
@@ -446,7 +408,7 @@
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "MonthGroup";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Group";
+            this.dataGridViewTextBoxColumn6.HeaderText = "MonthGroup";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 5;
             // 
@@ -457,57 +419,12 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Visible = false;
             // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "shipname";
-            this.dataGridViewTextBoxColumn8.HeaderText = "shipname";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "budjetbalance";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle4.Format = "\'$\'#,##0.00";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Balance from last month";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 160;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Managementfee";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "\'$\'#,##0.00";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Management fee";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 160;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 160;
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "ID";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Format = "\'$\'#,##0.00";
-            this.Total.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Total.HeaderText = "Total USD";
-            this.Total.MinimumWidth = 160;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 160;
-            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridViewTextBoxColumn11.DataPropertyName = "PaymentDate";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn11.HeaderText = "Payment Date";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 100;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -520,13 +437,6 @@
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 200;
             // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "SapreRemark";
-            this.dataGridViewTextBoxColumn13.HeaderText = "SapreRemark";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Visible = false;
-            // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "SpareDate1";
@@ -534,26 +444,75 @@
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.Visible = false;
             // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "SpareDate2";
-            this.dataGridViewTextBoxColumn15.HeaderText = "SpareDate2";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "MonthbeginTotal";
-            this.dataGridViewTextBoxColumn16.HeaderText = "MonthbeginTotal";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Visible = false;
-            // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.DataPropertyName = "SpareMoney1";
             this.dataGridViewTextBoxColumn17.HeaderText = "SpareMoney1";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Spareint1";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Spareint1";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "shipname";
+            this.dataGridViewTextBoxColumn8.HeaderText = "shipname";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "budjetbalance";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle5.Format = "\'$\'#,##0.00";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Balance from last month";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 160;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Managementfee";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "\'$\'#,##0.00";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Management fee";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 160;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "MonthbeginTotal";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "\'$\'#,##0.00";
+            this.dataGridViewTextBoxColumn16.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn16.HeaderText = "MonthbeginTotal";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "SapreRemark";
+            this.dataGridViewTextBoxColumn13.HeaderText = "SapreRemark";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "SpareDate2";
+            this.dataGridViewTextBoxColumn15.HeaderText = "SpareDate2";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Visible = false;
             // 
             // dataGridViewTextBoxColumn18
             // 
@@ -583,18 +542,23 @@
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.Visible = false;
             // 
-            // dataGridViewTextBoxColumn20
+            // dataExchange_feeBindingSource1
             // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Spareint1";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Spareint1";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Visible = false;
+            this.dataExchange_feeBindingSource1.DataMember = "DataExchange_fee";
+            this.dataExchange_feeBindingSource1.DataSource = this.aZUREDBDataSet;
+            // 
+            // aZUREDBDataSet
+            // 
+            this.aZUREDBDataSet.DataSetName = "AZUREDBDataSet";
+            this.aZUREDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataExchangeDataGridView
             // 
             this.dataExchangeDataGridView.AllowUserToAddRows = false;
             this.dataExchangeDataGridView.AllowUserToDeleteRows = false;
             this.dataExchangeDataGridView.AllowUserToOrderColumns = true;
+            this.dataExchangeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataExchangeDataGridView.AutoGenerateColumns = false;
             this.dataExchangeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataExchangeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -620,10 +584,10 @@
             this.dataGridViewCheckBoxColumn3,
             this.dataGridViewCheckBoxColumn4});
             this.dataExchangeDataGridView.DataSource = this.dataExchangeBindingSource2;
-            this.dataExchangeDataGridView.Location = new System.Drawing.Point(3, 423);
+            this.dataExchangeDataGridView.Location = new System.Drawing.Point(12, 432);
             this.dataExchangeDataGridView.Name = "dataExchangeDataGridView";
             this.dataExchangeDataGridView.RowTemplate.Height = 21;
-            this.dataExchangeDataGridView.Size = new System.Drawing.Size(1281, 509);
+            this.dataExchangeDataGridView.Size = new System.Drawing.Size(1316, 547);
             this.dataExchangeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn21
@@ -778,9 +742,10 @@
             this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
             this.dataGridViewCheckBoxColumn4.Visible = false;
             // 
-            // dataExchange_CommentTableAdapter
+            // dataExchangeBindingSource2
             // 
-            this.dataExchange_CommentTableAdapter.ClearBeforeFill = true;
+            this.dataExchangeBindingSource2.DataMember = "DataExchange";
+            this.dataExchangeBindingSource2.DataSource = this.aZUREDBDataSet;
             // 
             // panel1
             // 
@@ -789,7 +754,7 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 147);
+            this.panel1.Location = new System.Drawing.Point(0, 203);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 28);
             this.panel1.TabIndex = 41;
@@ -803,13 +768,15 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button13);
+            this.splitContainer1.Panel1.Controls.Add(this.button11);
             this.splitContainer1.Panel1.Controls.Add(this.timeNow);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.panel3);
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.dataExchange_feeDataGridView);
             this.splitContainer1.Panel1.Controls.Add(this.dataExchangeDataGridView);
             // 
@@ -817,7 +784,6 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.Controls.Add(this.button7);
-            this.splitContainer1.Panel2.Controls.Add(this.button11);
             this.splitContainer1.Panel2.Controls.Add(this.button10);
             this.splitContainer1.Panel2.Controls.Add(this.button8);
             this.splitContainer1.Panel2.Controls.Add(this.button9);
@@ -826,26 +792,47 @@
             this.splitContainer1.Panel2.Controls.Add(this.listBox1);
             this.splitContainer1.Panel2.Controls.Add(this.dataExchange_CommentDataGridView);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1815, 944);
-            this.splitContainer1.SplitterDistance = 1299;
+            this.splitContainer1.Size = new System.Drawing.Size(1924, 982);
+            this.splitContainer1.SplitterDistance = 1376;
             this.splitContainer1.TabIndex = 44;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button13.Location = new System.Drawing.Point(689, 400);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(225, 26);
+            this.button13.TabIndex = 52;
+            this.button13.Text = "SelectedRemove";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click_1);
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button11.Location = new System.Drawing.Point(445, 399);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(225, 27);
+            this.button11.TabIndex = 51;
+            this.button11.Text = "NewAddItem";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click_2);
             // 
             // timeNow
             // 
             this.timeNow.AutoSize = true;
-            this.timeNow.Dock = System.Windows.Forms.DockStyle.Top;
             this.timeNow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timeNow.Location = new System.Drawing.Point(0, 47);
+            this.timeNow.Location = new System.Drawing.Point(9, 107);
             this.timeNow.Name = "timeNow";
             this.timeNow.Size = new System.Drawing.Size(37, 15);
-            this.timeNow.TabIndex = 49;
+            this.timeNow.TabIndex = 50;
             this.timeNow.Text = "Time";
-            this.timeNow.Click += new System.EventHandler(this.timeNow_Click);
+            this.timeNow.Click += new System.EventHandler(this.timeNow_Click_1);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(42, 33);
+            this.textBox2.Location = new System.Drawing.Point(42, 125);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(381, 25);
             this.textBox2.TabIndex = 50;
@@ -856,16 +843,16 @@
             this.panel3.Controls.Add(this.button12);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(429, 10);
+            this.panel3.Location = new System.Drawing.Point(445, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(908, 192);
+            this.panel3.Size = new System.Drawing.Size(480, 191);
             this.panel3.TabIndex = 48;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Location = new System.Drawing.Point(0, 112);
+            this.panel2.Location = new System.Drawing.Point(0, 168);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 29);
             this.panel2.TabIndex = 47;
@@ -885,11 +872,11 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(0, 30);
+            this.label3.Location = new System.Drawing.Point(3, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 17);
             this.label3.TabIndex = 45;
@@ -899,9 +886,9 @@
             // 
             this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button10.Location = new System.Drawing.Point(180, 883);
+            this.button10.Location = new System.Drawing.Point(31, 836);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(78, 37);
+            this.button10.Size = new System.Drawing.Size(486, 37);
             this.button10.TabIndex = 44;
             this.button10.Text = "Delete";
             this.button10.UseVisualStyleBackColor = true;
@@ -911,9 +898,9 @@
             // 
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button9.Location = new System.Drawing.Point(257, 883);
+            this.button9.Location = new System.Drawing.Point(31, 793);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(85, 37);
+            this.button9.Size = new System.Drawing.Size(486, 37);
             this.button9.TabIndex = 43;
             this.button9.Text = "Open";
             this.button9.UseVisualStyleBackColor = true;
@@ -921,10 +908,11 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button4.Location = new System.Drawing.Point(92, 883);
+            this.button4.Location = new System.Drawing.Point(29, 879);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 37);
+            this.button4.Size = new System.Drawing.Size(486, 37);
             this.button4.TabIndex = 42;
             this.button4.Text = "Download";
             this.button4.UseVisualStyleBackColor = true;
@@ -934,9 +922,9 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(7, 883);
+            this.button3.Location = new System.Drawing.Point(31, 922);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 37);
+            this.button3.Size = new System.Drawing.Size(486, 37);
             this.button3.TabIndex = 41;
             this.button3.Text = "Upload";
             this.button3.UseVisualStyleBackColor = true;
@@ -944,12 +932,13 @@
             // 
             // listBox1
             // 
-            this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(7, 423);
+            this.listBox1.Location = new System.Drawing.Point(33, 432);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(352, 388);
+            this.listBox1.Size = new System.Drawing.Size(484, 340);
             this.listBox1.TabIndex = 40;
             // 
             // timer1
@@ -958,16 +947,34 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // button11
+            // shipMasterTBBindingSource
             // 
-            this.button11.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button11.Location = new System.Drawing.Point(266, 39);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(102, 26);
-            this.button11.TabIndex = 51;
-            this.button11.Text = "NewComment";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click_1);
+            this.shipMasterTBBindingSource.DataMember = "Ship_Master_TB";
+            this.shipMasterTBBindingSource.DataSource = this.aZUREDBDataSet;
+            // 
+            // dataExchange_feeTableAdapter
+            // 
+            this.dataExchange_feeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DataExchange_feeTableAdapter = this.dataExchange_feeTableAdapter;
+            this.tableAdapterManager.DataExchangeTableAdapter = this.dataExchangeTableAdapter;
+            this.tableAdapterManager.Ship_Master_TBTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp3.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // dataExchangeTableAdapter
+            // 
+            this.dataExchangeTableAdapter.ClearBeforeFill = true;
+            // 
+            // ship_Master_TBTableAdapter
+            // 
+            this.ship_Master_TBTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataExchange_CommentTableAdapter
+            // 
+            this.dataExchange_CommentTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -975,22 +982,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1815, 944);
+            this.ClientSize = new System.Drawing.Size(1924, 982);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Tag = "v1,v2";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -1001,6 +1007,7 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
@@ -1034,33 +1041,38 @@
         private AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter dataExchange_CommentTableAdapter;
         private System.Windows.Forms.DataGridView dataExchange_CommentDataGridView;
         private System.Windows.Forms.BindingSource dataExchange_feeBindingSource1;
-        private System.Windows.Forms.DataGridView dataExchange_feeDataGridView;
         private System.Windows.Forms.DataGridView dataExchangeDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
+        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label timeNow;
+        public System.Windows.Forms.DataGridView dataExchange_feeDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -1082,21 +1094,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn4;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
-        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Label timeNow;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
     }
 }
 
