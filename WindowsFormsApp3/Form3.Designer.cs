@@ -50,7 +50,7 @@
             // 
             editdateTimeLabel.AutoSize = true;
             editdateTimeLabel.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            editdateTimeLabel.Location = new System.Drawing.Point(22, 64);
+            editdateTimeLabel.Location = new System.Drawing.Point(11, 91);
             editdateTimeLabel.Name = "editdateTimeLabel";
             editdateTimeLabel.Size = new System.Drawing.Size(95, 18);
             editdateTimeLabel.TabIndex = 3;
@@ -60,7 +60,7 @@
             // 
             commentLabel.AutoSize = true;
             commentLabel.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            commentLabel.Location = new System.Drawing.Point(42, 134);
+            commentLabel.Location = new System.Drawing.Point(31, 161);
             commentLabel.Name = "commentLabel";
             commentLabel.Size = new System.Drawing.Size(71, 18);
             commentLabel.TabIndex = 5;
@@ -93,9 +93,9 @@
             this.editdateTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.dataExchange_CommentBindingSource, "EditdateTime", true));
             this.editdateTimeDateTimePicker.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.editdateTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.editdateTimeDateTimePicker.Location = new System.Drawing.Point(133, 59);
+            this.editdateTimeDateTimePicker.Location = new System.Drawing.Point(122, 86);
             this.editdateTimeDateTimePicker.Name = "editdateTimeDateTimePicker";
-            this.editdateTimeDateTimePicker.Size = new System.Drawing.Size(113, 25);
+            this.editdateTimeDateTimePicker.Size = new System.Drawing.Size(266, 25);
             this.editdateTimeDateTimePicker.TabIndex = 4;
             this.editdateTimeDateTimePicker.TabStop = false;
             this.editdateTimeDateTimePicker.ValueChanged += new System.EventHandler(this.editdateTimeDateTimePicker_ValueChanged);
@@ -104,7 +104,7 @@
             // 
             this.commentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataExchange_CommentBindingSource, "Comment", true));
             this.commentTextBox.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.commentTextBox.Location = new System.Drawing.Point(133, 131);
+            this.commentTextBox.Location = new System.Drawing.Point(122, 158);
             this.commentTextBox.Multiline = true;
             this.commentTextBox.Name = "commentTextBox";
             this.commentTextBox.Size = new System.Drawing.Size(266, 83);
@@ -113,7 +113,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(133, 302);
+            this.button1.Location = new System.Drawing.Point(122, 329);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(266, 26);
             this.button1.TabIndex = 2;
@@ -124,9 +124,9 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(133, 33);
+            this.textBox1.Location = new System.Drawing.Point(122, 60);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(113, 19);
+            this.textBox1.Size = new System.Drawing.Size(266, 19);
             this.textBox1.TabIndex = 8;
             this.textBox1.TabStop = false;
             // 
@@ -134,7 +134,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(69, 34);
+            this.label1.Location = new System.Drawing.Point(58, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 9;

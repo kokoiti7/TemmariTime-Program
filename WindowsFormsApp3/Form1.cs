@@ -46,6 +46,35 @@ namespace WindowsFormsApp3
             // TODO: このコード行はデータを 'aZUREDBDataSet1.DataExchange_Comment' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.dataExchange_CommentTableAdapter.Fill(this.aZUREDBDataSet1.DataExchange_Comment);
 
+            //フィルターかけてdisplaynameがPresentNameのものをコンボボックス３に表示させる
+            shipMasterTBBindingSource.Filter = "OwnerGroup = 1004";
+            comboBox3.DataSource = shipMasterTBBindingSource;
+            comboBox3.DisplayMember = "PresentName";
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            //list中身とりだす　フィルターかけた結果の列の長さ分
+
+
+            // this.shipMasterTBBindingSource.DataSource.ToString();
+
+            //Textboxにロード時あらかじめ月の初めを表示させかつその月の１日目である
+            DateTime dtToday = DateTime.Today;
+
+            DateTime dateTimeFirstDay = new DateTime(dtToday.Year, dtToday.Month, 1);
+
+            string firstday = dateTimeFirstDay.ToString();
+
+            string firstdayrem = firstday.Remove(10, 8);
+
+            textBox1.Text = firstdayrem;
+
+
+
+            //Sorting
+            Sorting();
+
+            //Timer
+            SetDisplaytime();
 
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
 
@@ -64,35 +93,7 @@ namespace WindowsFormsApp3
             URI = GetBlobSasUri(container);
 
 
-             //フィルターかけてdisplaynameがPresentNameのものをコンボボックス３に表示させる
-               shipMasterTBBindingSource.Filter = "OwnerGroup = 1004";
-               comboBox1.DataSource = shipMasterTBBindingSource;
-               comboBox1.DisplayMember = "PresentName";
-
-           //list中身とりだす　フィルターかけた結果の列の長さ分
-
-
-           // this.shipMasterTBBindingSource.DataSource.ToString();
-
-           //Textboxにロード時あらかじめ月の初めを表示させかつその月の１日目である
-           DateTime dtToday = DateTime.Today;
-
-            DateTime dateTimeFirstDay = new DateTime(dtToday.Year, dtToday.Month, 1);
-
-            string firstday = dateTimeFirstDay.ToString();
-
-            string firstdayrem = firstday.Remove(10,8);
-
-            textBox1.Text = firstdayrem;
-
-            //User Name 
-            textBox2.Text = Properties.Settings.Default.username;
-
-            //Sorting
-            Sorting();
-
-            //Timer
-            SetDisplaytime();
+            
 
            
 
@@ -129,8 +130,7 @@ namespace WindowsFormsApp3
         {
 
            
-            //ここでフィルターしたshipnameの列がほしい
-           //  comboBox1.SelectedItem = shipMasterTBBindingSource.Filter;
+
 
         }
 
@@ -188,15 +188,18 @@ namespace WindowsFormsApp3
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void NextMonth_Click(object sender, EventArgs e)
         {
-   
-            DateTime dt = System.DateTime.Parse(textBox1.Text) ;
-            DateTime dtadd = dt.AddDays(35);
-            DateTime dtadd2  =  new DateTime(dtadd.Year, dtadd.Month, 1);
+            //textboxをDatetimeに変換してdatetime型の変数にADDして年月、月の初めを設定している
+            DateTime dt = System.DateTime.Parse(textBox1.Text);
+            //月の初めから+35させるそうすれば確実に次の月だから
+            DateTime dtadd = dt.AddDays(+35);
+            DateTime dtadd2 = new DateTime(dtadd.Year, dtadd.Month, 1);
 
-            //秒を消してる０から１０番目そのあと８文字すべて
+            //秒を消してる
             string dtrem = dtadd2.ToString().Remove(10, 8);
+
+
             textBox1.Text = dtrem;
 
             //Sorting
@@ -208,6 +211,7 @@ namespace WindowsFormsApp3
         {
             //textboxをDatetimeに変換してdatetime型の変数にADDして年月、月の初めを設定している
             DateTime dt = System.DateTime.Parse(textBox1.Text);
+            //月初めからー３
             DateTime dtadd = dt.AddDays(-3);
             DateTime dtadd2 = new DateTime(dtadd.Year, dtadd.Month, 1);
 
@@ -221,25 +225,17 @@ namespace WindowsFormsApp3
         }
 
 
-        private void button4_Click_2(object sender, EventArgs e)
-        {
-            Sorting();
-        }
-
 
         private void Sorting ()
         {
 
             try{
-                comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-                //datachenagebindingsorceをソートして日付降順
-                dataExchangeBindingSource2.Sort = "MonthGroup";
-                dataExchange_feeBindingSource1.Sort = "MonthGroup"; //test
 
-                //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
-                dataExchangeBindingSource2.Filter = string.Format("Shipname like '{0:s}'", comboBox1.Text);
+          
 
-                dataExchange_feeBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBox1.Text);
+                dataExchangeBindingSource2.Filter = string.Format("Shipname like '{0:s}'", comboBox3.Text) + "AND MonthGroup = '" + textBox1.Text + "'";
+
+                dataExchange_feeBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBox3.Text) + "AND MonthGroup = '" + textBox1.Text + "'";
 
             }
             catch (ArgumentNullException)
@@ -351,7 +347,7 @@ namespace WindowsFormsApp3
             //変数１回介さないと空白が入るので面倒
             frm2.month = DateTime.Parse(textBox1.Text);
             frm2.pay = DateTime.Parse(textBox1.Text);
-            frm2.shipname = comboBox1.Text;
+            frm2.shipname = comboBox3.Text;
             frm2.Show();
         }
 
@@ -586,6 +582,18 @@ namespace WindowsFormsApp3
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            this.dataExchange_CommentBindingSource1.AddNew();
+            this.dataExchange_CommentBindingSource1.EndEdit();
+            this.dataExchange_CommentTableAdapter.Update(this.aZUREDBDataSet1.DataExchange_Comment);
+        }
+
+        private void timeNow_Click(object sender, EventArgs e)
         {
 
         }
