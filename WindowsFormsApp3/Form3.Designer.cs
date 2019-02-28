@@ -113,9 +113,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(102, 279);
+            this.button1.Location = new System.Drawing.Point(133, 302);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 26);
+            this.button1.Size = new System.Drawing.Size(266, 26);
             this.button1.TabIndex = 2;
             this.button1.Text = "Save and Close";
             this.button1.UseVisualStyleBackColor = true;

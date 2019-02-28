@@ -59,7 +59,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataExchange_CommentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKDataExchangeShipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataExchange_CommentDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,19 +112,25 @@
             this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataExchange_CommentTableAdapter = new WindowsFormsApp3.AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.timeNow = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).BeginInit();
@@ -140,6 +145,7 @@
             this.splitContainer1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataExchangeBindingSource2
@@ -154,15 +160,12 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.shipMasterTBBindingSource;
-            this.comboBox1.DisplayMember = "PresentName";
             this.comboBox1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(77, 0);
+            this.comboBox1.Location = new System.Drawing.Point(91, 0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(229, 28);
             this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // shipMasterTBBindingSource
             // 
@@ -358,7 +361,7 @@
             this.dataExchange_CommentDataGridView.ReadOnly = true;
             this.dataExchange_CommentDataGridView.RowHeadersVisible = false;
             this.dataExchange_CommentDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(425, 629);
+            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(425, 637);
             this.dataExchange_CommentDataGridView.TabIndex = 39;
             this.dataExchange_CommentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataExchange_CommentDataGridView_CellContentClick);
             // 
@@ -644,7 +647,7 @@
             this.dataExchangeDataGridView.Location = new System.Drawing.Point(13, 244);
             this.dataExchangeDataGridView.Name = "dataExchangeDataGridView";
             this.dataExchangeDataGridView.RowTemplate.Height = 21;
-            this.dataExchangeDataGridView.Size = new System.Drawing.Size(829, 629);
+            this.dataExchangeDataGridView.Size = new System.Drawing.Size(829, 653);
             this.dataExchangeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn21
@@ -806,15 +809,28 @@
             // panel1
             // 
             this.panel1.AllowDrop = true;
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.NextMonth);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 141);
+            this.panel1.Location = new System.Drawing.Point(12, 167);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 28);
             this.panel1.TabIndex = 41;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.Location = new System.Drawing.Point(306, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 17);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Select Month";
             // 
             // timeNow
             // 
@@ -826,12 +842,6 @@
             this.timeNow.Size = new System.Drawing.Size(37, 15);
             this.timeNow.TabIndex = 43;
             this.timeNow.Text = "Time";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // splitContainer1
             // 
@@ -852,13 +862,19 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.button10);
+            this.splitContainer1.Panel2.Controls.Add(this.button9);
+            this.splitContainer1.Panel2.Controls.Add(this.button4);
+            this.splitContainer1.Panel2.Controls.Add(this.button3);
+            this.splitContainer1.Panel2.Controls.Add(this.listBox1);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.dataExchangeDataGridView);
             this.splitContainer1.Panel2.Controls.Add(this.dataExchange_feeDataGridView);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
             this.splitContainer1.Panel2.Controls.Add(this.button12);
-            this.splitContainer1.Size = new System.Drawing.Size(1872, 876);
+            this.splitContainer1.Size = new System.Drawing.Size(1872, 893);
             this.splitContainer1.SplitterDistance = 425;
             this.splitContainer1.TabIndex = 44;
             // 
@@ -875,7 +891,7 @@
             // 
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Location = new System.Drawing.Point(12, 132);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(391, 29);
             this.panel2.TabIndex = 47;
@@ -912,13 +928,72 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "User";
             // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button10.Location = new System.Drawing.Point(980, 11);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(125, 37);
+            this.button10.TabIndex = 44;
+            this.button10.Text = "Delete";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button9.Location = new System.Drawing.Point(849, 11);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(120, 37);
+            this.button9.TabIndex = 43;
+            this.button9.Text = "Open";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button4.Location = new System.Drawing.Point(980, 66);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 37);
+            this.button4.TabIndex = 42;
+            this.button4.Text = "Download";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button3.Location = new System.Drawing.Point(849, 66);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 37);
+            this.button3.TabIndex = 41;
+            this.button3.Text = "Upload";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(853, 244);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(551, 640);
+            this.listBox1.TabIndex = 40;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1593, 893);
+            this.ClientSize = new System.Drawing.Size(1856, 910);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -930,7 +1005,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).EndInit();
@@ -948,6 +1022,7 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -972,7 +1047,6 @@
         private System.Windows.Forms.BindingSource dataExchangeBindingSource2;
         private System.Windows.Forms.BindingSource dataExchange_CommentBindingSource;
         private AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter;
-        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
         private System.Windows.Forms.BindingSource fKDataExchangeShipMasterTBBindingSource;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label5;
@@ -983,28 +1057,6 @@
         private System.Windows.Forms.BindingSource dataExchange_feeBindingSource1;
         private System.Windows.Forms.DataGridView dataExchange_feeDataGridView;
         private System.Windows.Forms.DataGridView dataExchangeDataGridView;
-        private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -1026,7 +1078,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label timeNow;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
@@ -1037,6 +1088,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn4;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
+        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

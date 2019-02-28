@@ -77,3 +77,12 @@ C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\obj\Debug
 C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.application
 C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Microsoft.Azure.KeyVault.Core.xml
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Microsoft.WindowsAzure.Storage.pdb
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
