@@ -57,32 +57,9 @@ namespace WindowsFormsApp3
             CloudBlobContainer container = blobClient.GetContainerReference("temmfile");
             bakupcontainer = container;
 
-
-            var backupBlobClient = storageAccount.CreateCloudBlobClient();
-            var backupContainer = backupBlobClient.GetContainerReference("temmfile");
-
-            // useFlatBlobListing is true to ensure loading all files in
-            // virtual blob sub-folders as a plain list
-            var list = backupContainer.ListBlobs(useFlatBlobListing: true);
-            var listOfFileNames = new List<string>();
-
-
-
-            var blobs = backupContainer.ListBlobs().OfType<CloudBlockBlob>().ToList();
+            listupdate();
 
            
-
-
-
-            foreach (var blob in blobs)
-            {
-                var blobFileName = blob.Uri.Segments.Last();
-
-                listOfFileNames.Add(blobFileName);
-
-            }
-
-            listBox1.DataSource = listOfFileNames;
 
             URI = GetBlobSasUri(container);
 
@@ -420,48 +397,7 @@ namespace WindowsFormsApp3
 
         }
 
-        private void dataExchange_CommentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
-
-        private void button3_Click_2(object sender, EventArgs e)
-        {
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
-
-            ////////////////// ここまでは各Storageサービス共通 //////////////////////////////////
-
-            //blob
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            //container
-            CloudBlobContainer container = blobClient.GetContainerReference("temmfile");
-
-
-            OpenFileDialog ofd = new OpenFileDialog();
-
-            //複数のファイルを選択できるようにする
-            ofd.Multiselect = true;
-
-
-            //ダイアログを表示する
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                //OKボタンがクリックされたとき、選択されたファイル名をすべて表示する
-                foreach (string fn in ofd.FileNames)
-                {
-                    var fileStream = System.IO.File.OpenRead(fn);
-                    var filenamefn = System.IO.Path.GetFileName(fn);
-                    CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenamefn);
-                    blockBlob_upload.UploadFromStream(fileStream);
-                }
-            }
-
-            else
-            {
-
-            }
-
-        }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
@@ -520,35 +456,138 @@ namespace WindowsFormsApp3
             DialogResult result = MessageBox.Show("削除しますか？", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             //何が選択されたか調べる
 
-            if (result == DialogResult.Yes)
-            {
-                blockBlob_delete.Delete();
+            try{
 
-
-                var list = container.ListBlobs(useFlatBlobListing: true);
-                var listOfFileNames = new List<string>();
-
-
-
-                var blobs = container.ListBlobs().OfType<CloudBlockBlob>().ToList();
-
-
-                foreach (var blob in blobs)
+                if (result == DialogResult.Yes)
                 {
-                    var blobFileName = blob.Uri.Segments.Last();
+                    blockBlob_delete.Delete();
 
-                    listOfFileNames.Add(blobFileName);
+
+
+                    var list = container.ListBlobs(useFlatBlobListing: true);
+                    var listOfFileNames = new List<string>();
+
+                    var blobs = container.ListBlobs().OfType<CloudBlockBlob>().ToList();
+
+
+                    foreach (var blob in blobs)
+                    {
+                        var blobFileName = blob.Uri.Segments.Last();
+
+                        listOfFileNames.Add(blobFileName);
+
+                    }
+
+                    listBox1.DataSource = listOfFileNames;
+                }
+
+                else if (result == DialogResult.No)
+                {
+
 
                 }
 
-                listBox1.DataSource = listOfFileNames;
+                
+
             }
 
-            else if (result == DialogResult.No)
+            catch(ArgumentNullException)
+            {
+                listupdate();
+            }
+
+          
+
+        }
+
+        private void listupdate()
+            {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
+        
+            var backupBlobClient = storageAccount.CreateCloudBlobClient();
+            var backupContainer = backupBlobClient.GetContainerReference("temmfile");
+
+            // useFlatBlobListing is true to ensure loading all files in
+            // virtual blob sub-folders as a plain list
+            var list = backupContainer.ListBlobs(useFlatBlobListing: true);
+            var listOfFileNames = new List<string>();
+
+
+
+            var blobs = backupContainer.ListBlobs().OfType<CloudBlockBlob>().ToList();
+
+
+            foreach (var blob in blobs)
+            {
+                var blobFileName = blob.Uri.Segments.Last();
+
+                listOfFileNames.Add(blobFileName);
+
+            }
+
+            listBox1.DataSource = listOfFileNames;
+
+
+            }
+    
+
+
+        private void button3_Click_2(object sender, EventArgs e)
             {
 
 
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
+                ////////////////// ここまでは各Storageサービス共通 //////////////////////////////////
+
+                //blob
+                CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+                //container
+                CloudBlobContainer container = blobClient.GetContainerReference("temmfile");
+
+
+                OpenFileDialog ofd = new OpenFileDialog();
+
+                //複数のファイルを選択できるようにする
+                ofd.Multiselect = true;
+
+                
+
+                //ダイアログを表示する
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    //OKボタンがクリックされたとき、選択されたファイル名をすべて表示する
+                    foreach (string fn in ofd.FileNames)
+                    {
+                        var fileStream = System.IO.File.OpenRead(fn);
+                        var filenamefn = System.IO.Path.GetFileName(fn);
+
+                        CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenamefn);
+                        blockBlob_upload.UploadFromStream(fileStream);
+
+     
+                    }
+
+                      
+
+                }
+
+                else
+                {
+
+                }
+               listupdate();
+
+
             }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

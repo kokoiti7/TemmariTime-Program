@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataExchangeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet = new WindowsFormsApp3.AZUREDBDataSet();
@@ -61,10 +61,6 @@
             this.dataExchange_CommentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKDataExchangeShipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataExchange_CommentDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataExchange_CommentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet1 = new WindowsFormsApp3.AZUREDBDataSet1();
             this.dataExchange_feeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -112,21 +108,24 @@
             this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataExchange_CommentTableAdapter = new WindowsFormsApp3.AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.timeNow = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeNow = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
@@ -201,9 +200,9 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(304, 6);
+            this.button1.Location = new System.Drawing.Point(613, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 37);
+            this.button1.Size = new System.Drawing.Size(292, 81);
             this.button1.TabIndex = 7;
             this.button1.Text = "GrandTotal";
             this.button1.UseVisualStyleBackColor = true;
@@ -214,9 +213,9 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Default;
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(13, 6);
+            this.button2.Location = new System.Drawing.Point(0, 109);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 37);
+            this.button2.Size = new System.Drawing.Size(290, 80);
             this.button2.TabIndex = 9;
             this.button2.Text = "NewAddItem";
             this.button2.UseVisualStyleBackColor = true;
@@ -229,7 +228,7 @@
             this.textBox1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox1.Location = new System.Drawing.Point(91, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 28);
+            this.textBox1.Size = new System.Drawing.Size(229, 28);
             this.textBox1.TabIndex = 2;
             this.textBox1.TabStop = false;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -239,9 +238,9 @@
             this.NextMonth.Dock = System.Windows.Forms.DockStyle.Left;
             this.NextMonth.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextMonth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NextMonth.Location = new System.Drawing.Point(271, 0);
+            this.NextMonth.Location = new System.Drawing.Point(357, 0);
             this.NextMonth.Name = "NextMonth";
-            this.NextMonth.Size = new System.Drawing.Size(35, 28);
+            this.NextMonth.Size = new System.Drawing.Size(37, 28);
             this.NextMonth.TabIndex = 12;
             this.NextMonth.TabStop = false;
             this.NextMonth.Text = ">";
@@ -253,9 +252,9 @@
             this.button5.Dock = System.Windows.Forms.DockStyle.Left;
             this.button5.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(236, 0);
+            this.button5.Location = new System.Drawing.Point(320, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 28);
+            this.button5.Size = new System.Drawing.Size(37, 28);
             this.button5.TabIndex = 3;
             this.button5.TabStop = false;
             this.button5.Text = "<";
@@ -266,9 +265,9 @@
             // 
             this.button6.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(155, 6);
+            this.button6.Location = new System.Drawing.Point(306, 110);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(136, 37);
+            this.button6.Size = new System.Drawing.Size(292, 80);
             this.button6.TabIndex = 16;
             this.button6.Text = "SelectReset";
             this.button6.UseVisualStyleBackColor = true;
@@ -278,9 +277,9 @@
             // 
             this.button7.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Location = new System.Drawing.Point(0, 3);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(201, 37);
+            this.button7.Size = new System.Drawing.Size(290, 81);
             this.button7.TabIndex = 24;
             this.button7.Text = "Save";
             this.button7.UseVisualStyleBackColor = true;
@@ -289,9 +288,9 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button8.Location = new System.Drawing.Point(209, 0);
+            this.button8.Location = new System.Drawing.Point(306, 3);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(191, 37);
+            this.button8.Size = new System.Drawing.Size(290, 81);
             this.button8.TabIndex = 25;
             this.button8.Text = "Comment Removed";
             this.button8.UseVisualStyleBackColor = true;
@@ -320,9 +319,9 @@
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button12.Location = new System.Drawing.Point(446, 6);
+            this.button12.Location = new System.Drawing.Point(613, 110);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(136, 37);
+            this.button12.Size = new System.Drawing.Size(292, 79);
             this.button12.TabIndex = 35;
             this.button12.Text = "SelectedRemove";
             this.button12.UseVisualStyleBackColor = true;
@@ -356,56 +355,13 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataExchange_CommentDataGridView.DataSource = this.dataExchange_CommentBindingSource1;
-            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(0, 244);
+            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(2, 10);
             this.dataExchange_CommentDataGridView.Name = "dataExchange_CommentDataGridView";
             this.dataExchange_CommentDataGridView.ReadOnly = true;
             this.dataExchange_CommentDataGridView.RowHeadersVisible = false;
             this.dataExchange_CommentDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(425, 637);
+            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(349, 188);
             this.dataExchange_CommentDataGridView.TabIndex = 39;
-            this.dataExchange_CommentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataExchange_CommentDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 46;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "EditdateTime";
-            dataGridViewCellStyle2.Format = "dd/MM HH:mm";
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Date Time";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 50;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Comment";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Comment";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "CommnetSpare";
-            this.dataGridViewTextBoxColumn4.HeaderText = "CommnetSpare";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // dataExchange_CommentBindingSource1
             // 
@@ -450,10 +406,10 @@
             this.dataGridViewCheckBoxColumn2,
             this.dataGridViewTextBoxColumn20});
             this.dataExchange_feeDataGridView.DataSource = this.dataExchange_feeBindingSource1;
-            this.dataExchange_feeDataGridView.Location = new System.Drawing.Point(13, 66);
+            this.dataExchange_feeDataGridView.Location = new System.Drawing.Point(0, 255);
             this.dataExchange_feeDataGridView.Name = "dataExchange_feeDataGridView";
             this.dataExchange_feeDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(829, 129);
+            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(1340, 106);
             this.dataExchange_feeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn5
@@ -617,8 +573,6 @@
             this.dataExchangeDataGridView.AllowUserToAddRows = false;
             this.dataExchangeDataGridView.AllowUserToDeleteRows = false;
             this.dataExchangeDataGridView.AllowUserToOrderColumns = true;
-            this.dataExchangeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataExchangeDataGridView.AutoGenerateColumns = false;
             this.dataExchangeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataExchangeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -644,10 +598,11 @@
             this.dataGridViewCheckBoxColumn3,
             this.dataGridViewCheckBoxColumn4});
             this.dataExchangeDataGridView.DataSource = this.dataExchangeBindingSource2;
-            this.dataExchangeDataGridView.Location = new System.Drawing.Point(13, 244);
+            this.dataExchangeDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataExchangeDataGridView.Location = new System.Drawing.Point(0, 367);
             this.dataExchangeDataGridView.Name = "dataExchangeDataGridView";
             this.dataExchangeDataGridView.RowTemplate.Height = 21;
-            this.dataExchangeDataGridView.Size = new System.Drawing.Size(829, 653);
+            this.dataExchangeDataGridView.Size = new System.Drawing.Size(1340, 509);
             this.dataExchangeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn21
@@ -809,39 +764,15 @@
             // panel1
             // 
             this.panel1.AllowDrop = true;
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.NextMonth);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 167);
+            this.panel1.Location = new System.Drawing.Point(0, 147);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(306, 28);
+            this.panel1.Size = new System.Drawing.Size(423, 28);
             this.panel1.TabIndex = 41;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(306, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Select Month";
-            // 
-            // timeNow
-            // 
-            this.timeNow.AutoSize = true;
-            this.timeNow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.timeNow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timeNow.Location = new System.Drawing.Point(0, 66);
-            this.timeNow.Name = "timeNow";
-            this.timeNow.Size = new System.Drawing.Size(37, 15);
-            this.timeNow.TabIndex = 43;
-            this.timeNow.Text = "Time";
             // 
             // splitContainer1
             // 
@@ -851,14 +782,15 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.timeNow);
+            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.panel3);
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.splitContainer1.Panel1.Controls.Add(this.timeNow);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.dataExchange_CommentDataGridView);
+            this.splitContainer1.Panel1.Controls.Add(this.dataExchange_feeDataGridView);
+            this.splitContainer1.Panel1.Controls.Add(this.dataExchangeDataGridView);
             // 
             // splitContainer1.Panel2
             // 
@@ -868,38 +800,38 @@
             this.splitContainer1.Panel2.Controls.Add(this.button4);
             this.splitContainer1.Panel2.Controls.Add(this.button3);
             this.splitContainer1.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
-            this.splitContainer1.Panel2.Controls.Add(this.dataExchangeDataGridView);
-            this.splitContainer1.Panel2.Controls.Add(this.dataExchange_feeDataGridView);
-            this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Panel2.Controls.Add(this.button12);
-            this.splitContainer1.Size = new System.Drawing.Size(1872, 893);
-            this.splitContainer1.SplitterDistance = 425;
+            this.splitContainer1.Panel2.Controls.Add(this.dataExchange_CommentDataGridView);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+            this.splitContainer1.Size = new System.Drawing.Size(1872, 876);
+            this.splitContainer1.SplitterDistance = 1340;
             this.splitContainer1.TabIndex = 44;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button7);
-            this.panel3.Location = new System.Drawing.Point(3, 201);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.button12);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Location = new System.Drawing.Point(429, 10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(403, 37);
+            this.panel3.Size = new System.Drawing.Size(908, 192);
             this.panel3.TabIndex = 48;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Location = new System.Drawing.Point(12, 132);
+            this.panel2.Location = new System.Drawing.Point(0, 112);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(391, 29);
+            this.panel2.Size = new System.Drawing.Size(423, 29);
             this.panel2.TabIndex = 47;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label4.Location = new System.Drawing.Point(0, 0);
@@ -907,14 +839,7 @@
             this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 47;
             this.label4.Text = "Select Ship";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(0, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(425, 19);
-            this.textBox2.TabIndex = 44;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -931,9 +856,9 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button10.Location = new System.Drawing.Point(980, 11);
+            this.button10.Location = new System.Drawing.Point(285, 827);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(125, 37);
+            this.button10.Size = new System.Drawing.Size(55, 37);
             this.button10.TabIndex = 44;
             this.button10.Text = "Delete";
             this.button10.UseVisualStyleBackColor = true;
@@ -942,9 +867,9 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button9.Location = new System.Drawing.Point(849, 11);
+            this.button9.Location = new System.Drawing.Point(2, 827);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 37);
+            this.button9.Size = new System.Drawing.Size(85, 37);
             this.button9.TabIndex = 43;
             this.button9.Text = "Open";
             this.button9.UseVisualStyleBackColor = true;
@@ -953,9 +878,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button4.Location = new System.Drawing.Point(980, 66);
+            this.button4.Location = new System.Drawing.Point(93, 827);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 37);
+            this.button4.Size = new System.Drawing.Size(76, 37);
             this.button4.TabIndex = 42;
             this.button4.Text = "Download";
             this.button4.UseVisualStyleBackColor = true;
@@ -964,22 +889,13 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(849, 66);
+            this.button3.Location = new System.Drawing.Point(189, 827);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 37);
+            this.button3.Size = new System.Drawing.Size(90, 37);
             this.button3.TabIndex = 41;
             this.button3.Text = "Upload";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_2);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(853, 244);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(551, 640);
-            this.listBox1.TabIndex = 40;
             // 
             // timer1
             // 
@@ -987,13 +903,85 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 46;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "EditdateTime";
+            dataGridViewCellStyle2.Format = "dd/MM HH:mm";
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Date Time";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 50;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Comment";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Comment";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "CommnetSpare";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CommnetSpare";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // timeNow
+            // 
+            this.timeNow.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.timeNow.AutoSize = true;
+            this.timeNow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.timeNow.Location = new System.Drawing.Point(2, 61);
+            this.timeNow.Name = "timeNow";
+            this.timeNow.Size = new System.Drawing.Size(37, 15);
+            this.timeNow.TabIndex = 49;
+            this.timeNow.Text = "Time";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox2.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox2.Location = new System.Drawing.Point(42, 33);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(381, 25);
+            this.textBox2.TabIndex = 50;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(3, 261);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(352, 556);
+            this.listBox1.TabIndex = 40;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1856, 910);
+            this.ClientSize = new System.Drawing.Size(1706, 893);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1077,18 +1065,11 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label timeNow;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -1117,6 +1098,12 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Label timeNow;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ListBox listBox1;
     }
 }
