@@ -947,7 +947,7 @@
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(7, 405);
+            this.listBox1.Location = new System.Drawing.Point(7, 423);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(352, 388);
             this.listBox1.TabIndex = 40;
