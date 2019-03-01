@@ -97,6 +97,12 @@
       <DependentUpon>AZUREDBDataSet1.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Blobtree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blobtree.Designer.cs">
+      <DependentUpon>Blobtree.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Blobtree.resx">
+      <DependentUpon>Blobtree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

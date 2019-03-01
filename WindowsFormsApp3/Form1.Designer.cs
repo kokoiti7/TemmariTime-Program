@@ -39,17 +39,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SelectMonth = new System.Windows.Forms.Label();
+            this.GrandTotal = new System.Windows.Forms.Button();
+            this.NewAddItem = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.NextMonth = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.BackMonth = new System.Windows.Forms.Button();
+            this.AllRecord = new System.Windows.Forms.Button();
+            this.AddComment = new System.Windows.Forms.Button();
+            this.RemoveComment = new System.Windows.Forms.Button();
+            this.SelectedRemove = new System.Windows.Forms.Button();
+            this.NonbudgetItemReconcileBoard = new System.Windows.Forms.Label();
             this.dataExchange_CommentDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,29 +103,25 @@
             this.dataExchangeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.SelectedRemoves = new System.Windows.Forms.Button();
+            this.NewAddsItem = new System.Windows.Forms.Button();
             this.timeNow = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.SelectShip = new System.Windows.Forms.Label();
+            this.User = new System.Windows.Forms.Label();
+            this.treeView = new System.Windows.Forms.TreeView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Donwload = new System.Windows.Forms.Button();
+            this.Upload = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataExchange_feeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchange_feeTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.dataExchangeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchangeTableAdapter();
             this.ship_Master_TBTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.dataExchange_CommentTableAdapter = new WindowsFormsApp3.AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter();
-            this.dataExchange_CommentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fKDataExchangeShipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
@@ -142,9 +138,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox3
@@ -156,50 +149,50 @@
             this.comboBox3.Size = new System.Drawing.Size(229, 28);
             this.comboBox3.TabIndex = 1;
             // 
-            // label2
+            // SelectMonth
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Select Month";
+            this.SelectMonth.AutoSize = true;
+            this.SelectMonth.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SelectMonth.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SelectMonth.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.SelectMonth.Location = new System.Drawing.Point(0, 0);
+            this.SelectMonth.Name = "SelectMonth";
+            this.SelectMonth.Size = new System.Drawing.Size(87, 17);
+            this.SelectMonth.TabIndex = 6;
+            this.SelectMonth.Text = "SelectMonth";
             // 
-            // button1
+            // GrandTotal
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(244, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 27);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "GrandTotal";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.GrandTotal.Cursor = System.Windows.Forms.Cursors.Default;
+            this.GrandTotal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrandTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GrandTotal.Location = new System.Drawing.Point(244, 158);
+            this.GrandTotal.Name = "GrandTotal";
+            this.GrandTotal.Size = new System.Drawing.Size(225, 27);
+            this.GrandTotal.TabIndex = 7;
+            this.GrandTotal.Text = "GrandTotal";
+            this.GrandTotal.UseVisualStyleBackColor = true;
+            this.GrandTotal.Click += new System.EventHandler(this.GrandTotal_Click);
             // 
-            // button2
+            // NewAddItem
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(0, 73);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(223, 27);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "NewAddItem";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.NewAddItem.Cursor = System.Windows.Forms.Cursors.Default;
+            this.NewAddItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewAddItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.NewAddItem.Location = new System.Drawing.Point(0, 73);
+            this.NewAddItem.Name = "NewAddItem";
+            this.NewAddItem.Size = new System.Drawing.Size(223, 27);
+            this.NewAddItem.TabIndex = 9;
+            this.NewAddItem.Text = "NewAddItem";
+            this.NewAddItem.UseVisualStyleBackColor = true;
+            this.NewAddItem.Click += new System.EventHandler(this.NewAddItem_Click);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.textBox1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(91, 0);
+            this.textBox1.Location = new System.Drawing.Point(87, 0);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 28);
             this.textBox1.TabIndex = 2;
@@ -211,7 +204,7 @@
             this.NextMonth.Dock = System.Windows.Forms.DockStyle.Left;
             this.NextMonth.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextMonth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NextMonth.Location = new System.Drawing.Point(357, 0);
+            this.NextMonth.Location = new System.Drawing.Point(353, 0);
             this.NextMonth.Name = "NextMonth";
             this.NextMonth.Size = new System.Drawing.Size(37, 28);
             this.NextMonth.TabIndex = 12;
@@ -220,85 +213,83 @@
             this.NextMonth.UseVisualStyleBackColor = true;
             this.NextMonth.Click += new System.EventHandler(this.NextMonth_Click);
             // 
-            // button5
+            // BackMonth
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(320, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(37, 28);
-            this.button5.TabIndex = 3;
-            this.button5.TabStop = false;
-            this.button5.Text = "<";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.BackMonth.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BackMonth.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackMonth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackMonth.Location = new System.Drawing.Point(316, 0);
+            this.BackMonth.Name = "BackMonth";
+            this.BackMonth.Size = new System.Drawing.Size(37, 28);
+            this.BackMonth.TabIndex = 3;
+            this.BackMonth.TabStop = false;
+            this.BackMonth.Text = "<";
+            this.BackMonth.UseVisualStyleBackColor = true;
+            this.BackMonth.Click += new System.EventHandler(this.BackMonth_Click);
             // 
-            // button6
+            // AllRecord
             // 
-            this.button6.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(0, 158);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(225, 28);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "AllRecord";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.AllRecord.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.AllRecord.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AllRecord.Location = new System.Drawing.Point(0, 158);
+            this.AllRecord.Name = "AllRecord";
+            this.AllRecord.Size = new System.Drawing.Size(225, 28);
+            this.AllRecord.TabIndex = 16;
+            this.AllRecord.Text = "AllRecord";
+            this.AllRecord.UseVisualStyleBackColor = true;
+            this.AllRecord.Click += new System.EventHandler(this.AllRecord_Click);
             // 
-            // button7
+            // AddComment
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(33, 210);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(228, 26);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "AddComment";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.AddComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddComment.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.AddComment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AddComment.Location = new System.Drawing.Point(931, 96);
+            this.AddComment.Name = "AddComment";
+            this.AddComment.Size = new System.Drawing.Size(197, 26);
+            this.AddComment.TabIndex = 24;
+            this.AddComment.Text = "AddComment";
+            this.AddComment.UseVisualStyleBackColor = true;
+            this.AddComment.Click += new System.EventHandler(this.AddComment_Click);
             // 
-            // button8
+            // RemoveComment
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button8.Location = new System.Drawing.Point(292, 211);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(225, 25);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "Removed";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.RemoveComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RemoveComment.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.RemoveComment.Location = new System.Drawing.Point(1179, 96);
+            this.RemoveComment.Name = "RemoveComment";
+            this.RemoveComment.Size = new System.Drawing.Size(194, 25);
+            this.RemoveComment.TabIndex = 25;
+            this.RemoveComment.Text = "Removed";
+            this.RemoveComment.UseVisualStyleBackColor = true;
+            this.RemoveComment.Click += new System.EventHandler(this.RemoveComment_Click);
             // 
-            // button12
+            // SelectedRemove
             // 
-            this.button12.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button12.Location = new System.Drawing.Point(244, 73);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(225, 26);
-            this.button12.TabIndex = 35;
-            this.button12.Text = "SelectedRemove";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.SelectedRemove.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SelectedRemove.Location = new System.Drawing.Point(244, 73);
+            this.SelectedRemove.Name = "SelectedRemove";
+            this.SelectedRemove.Size = new System.Drawing.Size(225, 26);
+            this.SelectedRemove.TabIndex = 35;
+            this.SelectedRemove.Text = "SelectedRemove";
+            this.SelectedRemove.UseVisualStyleBackColor = true;
+            this.SelectedRemove.Click += new System.EventHandler(this.SelectedRemove_Click);
             // 
-            // label5
+            // NonbudgetItemReconcileBoard
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Meiryo UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(7, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(432, 30);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Non-budget item reconcile board";
+            this.NonbudgetItemReconcileBoard.AutoSize = true;
+            this.NonbudgetItemReconcileBoard.Font = new System.Drawing.Font("Meiryo UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NonbudgetItemReconcileBoard.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.NonbudgetItemReconcileBoard.Location = new System.Drawing.Point(7, 17);
+            this.NonbudgetItemReconcileBoard.Name = "NonbudgetItemReconcileBoard";
+            this.NonbudgetItemReconcileBoard.Size = new System.Drawing.Size(422, 30);
+            this.NonbudgetItemReconcileBoard.TabIndex = 37;
+            this.NonbudgetItemReconcileBoard.Text = "Non-budgetItemReconcileBoard";
             // 
             // dataExchange_CommentDataGridView
             // 
             this.dataExchange_CommentDataGridView.AllowUserToOrderColumns = true;
-            this.dataExchange_CommentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataExchange_CommentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataExchange_CommentDataGridView.AutoGenerateColumns = false;
             this.dataExchange_CommentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataExchange_CommentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -307,11 +298,11 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataExchange_CommentDataGridView.DataSource = this.dataExchange_CommentBindingSource1;
-            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(33, 248);
+            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(931, 131);
             this.dataExchange_CommentDataGridView.Name = "dataExchange_CommentDataGridView";
             this.dataExchange_CommentDataGridView.RowHeadersVisible = false;
             this.dataExchange_CommentDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(484, 106);
+            this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(446, 106);
             this.dataExchange_CommentDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn1
@@ -393,7 +384,7 @@
             this.dataExchange_feeDataGridView.Location = new System.Drawing.Point(12, 249);
             this.dataExchange_feeDataGridView.Name = "dataExchange_feeDataGridView";
             this.dataExchange_feeDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(1316, 105);
+            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(1361, 105);
             this.dataExchange_feeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn5
@@ -584,10 +575,10 @@
             this.dataGridViewCheckBoxColumn3,
             this.dataGridViewCheckBoxColumn4});
             this.dataExchangeDataGridView.DataSource = this.dataExchangeBindingSource2;
-            this.dataExchangeDataGridView.Location = new System.Drawing.Point(12, 432);
+            this.dataExchangeDataGridView.Location = new System.Drawing.Point(12, 546);
             this.dataExchangeDataGridView.Name = "dataExchangeDataGridView";
             this.dataExchangeDataGridView.RowTemplate.Height = 21;
-            this.dataExchangeDataGridView.Size = new System.Drawing.Size(1316, 547);
+            this.dataExchangeDataGridView.Size = new System.Drawing.Size(1361, 433);
             this.dataExchangeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn21
@@ -751,14 +742,13 @@
             // 
             this.panel1.AllowDrop = true;
             this.panel1.Controls.Add(this.NextMonth);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.BackMonth);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 203);
+            this.panel1.Controls.Add(this.SelectMonth);
+            this.panel1.Location = new System.Drawing.Point(6, 199);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 28);
             this.panel1.TabIndex = 41;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // splitContainer1
             // 
@@ -768,189 +758,168 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button13);
-            this.splitContainer1.Panel1.Controls.Add(this.button11);
+            this.splitContainer1.Panel1.Controls.Add(this.AddComment);
+            this.splitContainer1.Panel1.Controls.Add(this.SelectedRemoves);
+            this.splitContainer1.Panel1.Controls.Add(this.NewAddsItem);
+            this.splitContainer1.Panel1.Controls.Add(this.RemoveComment);
             this.splitContainer1.Panel1.Controls.Add(this.timeNow);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.panel3);
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.dataExchange_CommentDataGridView);
+            this.splitContainer1.Panel1.Controls.Add(this.NonbudgetItemReconcileBoard);
+            this.splitContainer1.Panel1.Controls.Add(this.User);
             this.splitContainer1.Panel1.Controls.Add(this.dataExchange_feeDataGridView);
             this.splitContainer1.Panel1.Controls.Add(this.dataExchangeDataGridView);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.Controls.Add(this.button7);
-            this.splitContainer1.Panel2.Controls.Add(this.button10);
-            this.splitContainer1.Panel2.Controls.Add(this.button8);
-            this.splitContainer1.Panel2.Controls.Add(this.button9);
-            this.splitContainer1.Panel2.Controls.Add(this.button4);
-            this.splitContainer1.Panel2.Controls.Add(this.button3);
-            this.splitContainer1.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.dataExchange_CommentDataGridView);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+            this.splitContainer1.Panel2.Controls.Add(this.treeView);
+            this.splitContainer1.Panel2.Controls.Add(this.Delete);
+            this.splitContainer1.Panel2.Controls.Add(this.Donwload);
+            this.splitContainer1.Panel2.Controls.Add(this.Upload);
             this.splitContainer1.Size = new System.Drawing.Size(1924, 982);
             this.splitContainer1.SplitterDistance = 1376;
             this.splitContainer1.TabIndex = 44;
             // 
-            // button13
+            // SelectedRemoves
             // 
-            this.button13.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button13.Location = new System.Drawing.Point(689, 400);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(225, 26);
-            this.button13.TabIndex = 52;
-            this.button13.Text = "SelectedRemove";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click_1);
+            this.SelectedRemoves.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SelectedRemoves.Location = new System.Drawing.Point(689, 400);
+            this.SelectedRemoves.Name = "SelectedRemoves";
+            this.SelectedRemoves.Size = new System.Drawing.Size(225, 26);
+            this.SelectedRemoves.TabIndex = 52;
+            this.SelectedRemoves.Text = "SelectedRemoves";
+            this.SelectedRemoves.UseVisualStyleBackColor = true;
+            this.SelectedRemoves.Click += new System.EventHandler(this.SelectedRemoves_Click);
             // 
-            // button11
+            // NewAddsItem
             // 
-            this.button11.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button11.Location = new System.Drawing.Point(445, 399);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(225, 27);
-            this.button11.TabIndex = 51;
-            this.button11.Text = "NewAddItem";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click_2);
+            this.NewAddsItem.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NewAddsItem.Location = new System.Drawing.Point(445, 399);
+            this.NewAddsItem.Name = "NewAddsItem";
+            this.NewAddsItem.Size = new System.Drawing.Size(225, 27);
+            this.NewAddsItem.TabIndex = 51;
+            this.NewAddsItem.Text = "NewAddsItem";
+            this.NewAddsItem.UseVisualStyleBackColor = true;
+            this.NewAddsItem.Click += new System.EventHandler(this.NewAddsItem_Click);
             // 
             // timeNow
             // 
             this.timeNow.AutoSize = true;
             this.timeNow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timeNow.Location = new System.Drawing.Point(9, 107);
+            this.timeNow.Location = new System.Drawing.Point(6, 68);
             this.timeNow.Name = "timeNow";
             this.timeNow.Size = new System.Drawing.Size(37, 15);
             this.timeNow.TabIndex = 50;
             this.timeNow.Text = "Time";
-            this.timeNow.Click += new System.EventHandler(this.timeNow_Click_1);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(42, 125);
+            this.textBox2.Location = new System.Drawing.Point(48, 97);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(381, 25);
             this.textBox2.TabIndex = 50;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button12);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(445, 51);
+            this.panel3.Controls.Add(this.GrandTotal);
+            this.panel3.Controls.Add(this.SelectedRemove);
+            this.panel3.Controls.Add(this.AllRecord);
+            this.panel3.Controls.Add(this.NewAddItem);
+            this.panel3.Location = new System.Drawing.Point(449, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(480, 191);
+            this.panel3.Size = new System.Drawing.Size(476, 191);
             this.panel3.TabIndex = 48;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.SelectShip);
             this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Location = new System.Drawing.Point(0, 168);
+            this.panel2.Location = new System.Drawing.Point(6, 142);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 29);
             this.panel2.TabIndex = 47;
             // 
-            // label4
+            // SelectShip
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 17);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Select Ship";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.SelectShip.AutoSize = true;
+            this.SelectShip.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SelectShip.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SelectShip.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.SelectShip.Location = new System.Drawing.Point(0, 0);
+            this.SelectShip.Name = "SelectShip";
+            this.SelectShip.Size = new System.Drawing.Size(74, 17);
+            this.SelectShip.TabIndex = 47;
+            this.SelectShip.Text = "SelectShip";
             // 
-            // label3
+            // User
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(3, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 17);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "User";
+            this.User.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.User.AutoSize = true;
+            this.User.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.User.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.User.Location = new System.Drawing.Point(6, 97);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(36, 17);
+            this.User.TabIndex = 45;
+            this.User.Text = "User";
             // 
-            // button10
+            // treeView
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button10.Location = new System.Drawing.Point(31, 836);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(486, 37);
-            this.button10.TabIndex = 44;
-            this.button10.Text = "Delete";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click_1);
-            // 
-            // button9
-            // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button9.Location = new System.Drawing.Point(31, 793);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(486, 37);
-            this.button9.TabIndex = 43;
-            this.button9.Text = "Open";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button4.Location = new System.Drawing.Point(29, 879);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(486, 37);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Download";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(31, 922);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(486, 37);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Upload";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
-            // 
-            // listBox1
-            // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.treeView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(33, 432);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(484, 340);
-            this.listBox1.TabIndex = 40;
+            this.treeView.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.treeView.Location = new System.Drawing.Point(30, 17);
+            this.treeView.Name = "treeView";
+            this.treeView.Size = new System.Drawing.Size(485, 759);
+            this.treeView.TabIndex = 45;
+            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView_NodeMouseDoubleClick);
+            // 
+            // Delete
+            // 
+            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Delete.Location = new System.Drawing.Point(3, 836);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(512, 37);
+            this.Delete.TabIndex = 44;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Donwload
+            // 
+            this.Donwload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Donwload.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Donwload.Location = new System.Drawing.Point(3, 879);
+            this.Donwload.Name = "Donwload";
+            this.Donwload.Size = new System.Drawing.Size(512, 37);
+            this.Donwload.TabIndex = 42;
+            this.Donwload.Text = "Download";
+            this.Donwload.UseVisualStyleBackColor = true;
+            this.Donwload.Click += new System.EventHandler(this.Download_Click);
+            // 
+            // Upload
+            // 
+            this.Upload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Upload.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Upload.Location = new System.Drawing.Point(3, 922);
+            this.Upload.Name = "Upload";
+            this.Upload.Size = new System.Drawing.Size(512, 37);
+            this.Upload.TabIndex = 41;
+            this.Upload.Text = "Upload";
+            this.Upload.UseVisualStyleBackColor = true;
+            this.Upload.Click += new System.EventHandler(this.Upload_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // shipMasterTBBindingSource
-            // 
-            this.shipMasterTBBindingSource.DataMember = "Ship_Master_TB";
-            this.shipMasterTBBindingSource.DataSource = this.aZUREDBDataSet;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
             // 
             // dataExchange_feeTableAdapter
             // 
@@ -975,6 +944,11 @@
             // dataExchange_CommentTableAdapter
             // 
             this.dataExchange_CommentTableAdapter.ClearBeforeFill = true;
+            // 
+            // shipMasterTBBindingSource
+            // 
+            this.shipMasterTBBindingSource.DataMember = "Ship_Master_TB";
+            this.shipMasterTBBindingSource.DataSource = this.aZUREDBDataSet;
             // 
             // Form1
             // 
@@ -1008,34 +982,29 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label SelectMonth;
+        private System.Windows.Forms.Button NewAddItem;
         public System.Windows.Forms.ComboBox comboBox3;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button GrandTotal;
         private System.Windows.Forms.Button NextMonth;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BackMonth;
         public System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
-        public System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button AllRecord;
+        public System.Windows.Forms.Button AddComment;
+        private System.Windows.Forms.Button RemoveComment;
         private AZUREDBDataSet aZUREDBDataSet;
         private AZUREDBDataSetTableAdapters.DataExchange_feeTableAdapter dataExchange_feeTableAdapter;
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private AZUREDBDataSetTableAdapters.DataExchangeTableAdapter dataExchangeTableAdapter;
         private System.Windows.Forms.BindingSource dataExchangeBindingSource2;
-        private System.Windows.Forms.BindingSource dataExchange_CommentBindingSource;
         private AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter;
-        private System.Windows.Forms.BindingSource fKDataExchangeShipMasterTBBindingSource;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button SelectedRemove;
+        private System.Windows.Forms.Label NonbudgetItemReconcileBoard;
         private AZUREDBDataSet1 aZUREDBDataSet1;
         private System.Windows.Forms.BindingSource dataExchange_CommentBindingSource1;
         private AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter dataExchange_CommentTableAdapter;
@@ -1044,23 +1013,19 @@
         private System.Windows.Forms.DataGridView dataExchangeDataGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label User;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label SelectShip;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
-        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Donwload;
+        private System.Windows.Forms.Button Upload;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label timeNow;
         public System.Windows.Forms.DataGridView dataExchange_feeDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
@@ -1071,8 +1036,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button SelectedRemoves;
+        private System.Windows.Forms.Button NewAddsItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -1104,6 +1069,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.TreeView treeView;
+        private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
     }
 }
 

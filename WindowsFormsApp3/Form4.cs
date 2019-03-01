@@ -18,7 +18,6 @@ namespace WindowsFormsApp3
         public string shipname;
         public DateTime month;
         public DateTime pay;
-        private Form1 parentF1; //form1で呼び出す変数
 
         public Form4(Form1 parent)
         {
