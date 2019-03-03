@@ -877,6 +877,7 @@
             this.treeView.Name = "treeView";
             this.treeView.Size = new System.Drawing.Size(485, 759);
             this.treeView.TabIndex = 45;
+            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterSelect);
             this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView_NodeMouseDoubleClick);
             // 
             // Delete

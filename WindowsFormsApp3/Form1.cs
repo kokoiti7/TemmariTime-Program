@@ -598,7 +598,11 @@ namespace WindowsFormsApp3
             CloudBlobContainer container = blobClientWithSAS.GetContainerReference("temmfile");
 
             //Get a reference to a blob within the container.
-            CloudBlockBlob blob = container.GetBlockBlobReference(firstnode);
+
+           // MessageBox.Show(firstnode);
+           //  MessageBox.Show(treeView.SelectedNode.Text.ToString());
+
+            CloudBlockBlob blob = container.GetBlockBlobReference(treeView.SelectedNode.Text);
 
             SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy();
             sasConstraints.SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5);
@@ -612,6 +616,9 @@ namespace WindowsFormsApp3
             Process.Start(blob.Uri + sasBlobToken);
         }
 
+        private void treeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
 
+        }
     }
 }
