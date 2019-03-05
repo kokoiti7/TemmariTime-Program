@@ -62,9 +62,18 @@ namespace WindowsFormsApp3
             // 先頭ノードを選択状態に変更する
             treeView.SelectedNode = objTopNode;
 
-            firstnode = tn.FirstNode.ToString();
+            try
+            {
+                firstnode = tn.FirstNode.ToString();
 
-            firstnode = firstnode.Remove(0,10);
+                firstnode = firstnode.Remove(0, 10);
+
+            }
+            catch (NullReferenceException)
+            {
+                firstnode = " ";
+            }
+
 
 
 
@@ -117,11 +126,7 @@ namespace WindowsFormsApp3
 
         }
 
-
-
-    
-
-        private String getFileSize(long fileSize)
+        private String GetFileSize(long fileSize)
         {
             String ret = fileSize + " バイト";
             if (fileSize > (1024f * 1024f * 1024f))
@@ -264,7 +269,6 @@ namespace WindowsFormsApp3
             return blob.Uri + sasBlobToken;
 
         }
-
 
         private void Timer1_Tick_1(object sender, EventArgs e)
         {
@@ -441,8 +445,6 @@ namespace WindowsFormsApp3
             }
         }
 
-
-
         private void Download_Click(object sender, EventArgs e)
         {
 
@@ -528,7 +530,7 @@ namespace WindowsFormsApp3
 
             }
 
-            catch (ArgumentNullException)
+            catch (StorageException)
             {
                 Listupdate();
             }
@@ -616,7 +618,12 @@ namespace WindowsFormsApp3
             Process.Start(blob.Uri + sasBlobToken);
         }
 
-        private void treeView_AfterSelect(object sender, TreeViewEventArgs e)
+        private void TreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+        
+        }
+
+        private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

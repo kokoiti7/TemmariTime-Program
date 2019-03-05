@@ -19,5 +19,8 @@
     <Setting Name="UserName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Mito</Value>
     </Setting>
+    <Setting Name="ComboShip" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -33,15 +33,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxShipname = new System.Windows.Forms.ComboBox();
             this.buttonShowAllship = new System.Windows.Forms.Button();
-            this.aZUREDBDataSet = new TechnicalWatchlist.AZUREDBDataSet();
+            this.aZUREDBDataSet1 = new TechnicalWatchlist.AZUREDBDataSet();
             this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ship_Master_TBTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.tableAdapterManager = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.timeNow = new System.Windows.Forms.Label();
+            this.timenow = new System.Windows.Forms.Label();
+            this.SaveAll = new System.Windows.Forms.Button();
+            this.Refresh = new System.Windows.Forms.Button();
+            this.AddNewItemToTheList = new System.Windows.Forms.Button();
             this.txtboxUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.watchlist_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,11 +49,26 @@
             this.watchlist_dwgBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_dwgTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_dwgTableAdapter();
             this.watchlist_FileBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.watchlist_FileTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter();
+            this.watchlist_dwgBindingSource2TableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter();
             this.watchlist_FileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_dwgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_MasterBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_MasterDataGridView = new System.Windows.Forms.DataGridView();
+            this.watchlist_dwgBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.watchlist_FileBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.watchlist_FileListBox = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.FileNameTextBox2 = new System.Windows.Forms.TextBox();
+            this.UploadWithFiledialog2 = new System.Windows.Forms.Button();
+            this.filenameTextBox1 = new System.Windows.Forms.TextBox();
+            this.remark2TextBox = new System.Windows.Forms.TextBox();
+            this.Delete = new System.Windows.Forms.Button();
+            this.UploadWithFileDialog = new System.Windows.Forms.Button();
+            this.Delete2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.watchlist_dwgListBox = new System.Windows.Forms.ListBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,22 +80,9 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.watchlist_dwgBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.watchlist_FileBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.watchlist_FileListBox = new System.Windows.Forms.ListBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.filenameTextBox1 = new System.Windows.Forms.TextBox();
-            this.remark2TextBox = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.BTNuploadwithdialog = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.watchlist_dwgListBox = new System.Windows.Forms.ListBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             remark2Label = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_MasterBindingSource)).BeginInit();
@@ -117,7 +119,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Trouble and defect watchlist";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBoxShipname
             // 
@@ -128,27 +129,28 @@
             this.comboBoxShipname.Size = new System.Drawing.Size(222, 28);
             this.comboBoxShipname.TabIndex = 1;
             this.comboBoxShipname.Tag = "";
+            this.comboBoxShipname.SelectionChangeCommitted += new System.EventHandler(this.ComboBoxShipname_SelectionChangeCommitted);
             // 
             // buttonShowAllship
             // 
             this.buttonShowAllship.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonShowAllship.Location = new System.Drawing.Point(240, 48);
             this.buttonShowAllship.Name = "buttonShowAllship";
-            this.buttonShowAllship.Size = new System.Drawing.Size(111, 33);
+            this.buttonShowAllship.Size = new System.Drawing.Size(123, 33);
             this.buttonShowAllship.TabIndex = 2;
             this.buttonShowAllship.Text = "ALL SHIP";
             this.buttonShowAllship.UseVisualStyleBackColor = true;
-            this.buttonShowAllship.Click += new System.EventHandler(this.buttonShowAllship_Click);
+            this.buttonShowAllship.Click += new System.EventHandler(this.ButtonShowAllship_Click);
             // 
-            // aZUREDBDataSet
+            // aZUREDBDataSet1
             // 
-            this.aZUREDBDataSet.DataSetName = "AZUREDBDataSet";
-            this.aZUREDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.aZUREDBDataSet1.DataSetName = "AZUREDBDataSet";
+            this.aZUREDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ship_Master_TBBindingSource
             // 
             this.ship_Master_TBBindingSource.DataMember = "Ship_Master_TB";
-            this.ship_Master_TBBindingSource.DataSource = this.aZUREDBDataSet;
+            this.ship_Master_TBBindingSource.DataSource = this.aZUREDBDataSet1;
             // 
             // ship_Master_TBTableAdapter
             // 
@@ -165,10 +167,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.timeNow);
+            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.timenow);
+            this.panel1.Controls.Add(this.SaveAll);
+            this.panel1.Controls.Add(this.Refresh);
+            this.panel1.Controls.Add(this.AddNewItemToTheList);
             this.panel1.Controls.Add(this.txtboxUsername);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -177,71 +180,71 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 101);
+            this.panel1.Size = new System.Drawing.Size(1294, 101);
             this.panel1.TabIndex = 3;
             // 
-            // button3
+            // timenow
             // 
-            this.button3.Location = new System.Drawing.Point(581, 51);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 32);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Save ALL";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.timenow.AutoSize = true;
+            this.timenow.Location = new System.Drawing.Point(766, 9);
+            this.timenow.Name = "timenow";
+            this.timenow.Size = new System.Drawing.Size(63, 17);
+            this.timenow.TabIndex = 9;
+            this.timenow.Text = "timenow";
             // 
-            // button2
+            // SaveAll
             // 
-            this.button2.Image = global::TechnicalWatchlist.Properties.Resources.th1KOZZPLO;
-            this.button2.Location = new System.Drawing.Point(957, 49);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(41, 36);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = true;
+            this.SaveAll.Location = new System.Drawing.Point(581, 51);
+            this.SaveAll.Name = "SaveAll";
+            this.SaveAll.Size = new System.Drawing.Size(144, 32);
+            this.SaveAll.TabIndex = 8;
+            this.SaveAll.Text = "SaveAll";
+            this.SaveAll.UseVisualStyleBackColor = true;
+            this.SaveAll.Click += new System.EventHandler(this.SaveAll_Click);
             // 
-            // button1
+            // Refresh
             // 
-            this.button1.Location = new System.Drawing.Point(395, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add new item to the list";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Refresh.Image = global::TechnicalWatchlist.Properties.Resources.th1KOZZPLO;
+            this.Refresh.Location = new System.Drawing.Point(957, 49);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(41, 36);
+            this.Refresh.TabIndex = 7;
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
-            // timeNow
+            // AddNewItemToTheList
             // 
-            this.timeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeNow.AutoSize = true;
-            this.timeNow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timeNow.Location = new System.Drawing.Point(933, 3);
-            this.timeNow.Name = "timeNow";
-            this.timeNow.Size = new System.Drawing.Size(41, 15);
-            this.timeNow.TabIndex = 5;
-            this.timeNow.Text = "label3";
+            this.AddNewItemToTheList.Location = new System.Drawing.Point(397, 51);
+            this.AddNewItemToTheList.Name = "AddNewItemToTheList";
+            this.AddNewItemToTheList.Size = new System.Drawing.Size(178, 32);
+            this.AddNewItemToTheList.TabIndex = 6;
+            this.AddNewItemToTheList.Text = "Add new item to the list";
+            this.AddNewItemToTheList.UseVisualStyleBackColor = true;
+            this.AddNewItemToTheList.Click += new System.EventHandler(this.AddNewItemToTheList_Click);
             // 
             // txtboxUsername
             // 
             this.txtboxUsername.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtboxUsername.Location = new System.Drawing.Point(502, 11);
+            this.txtboxUsername.Location = new System.Drawing.Point(545, 11);
             this.txtboxUsername.Name = "txtboxUsername";
             this.txtboxUsername.Size = new System.Drawing.Size(180, 27);
             this.txtboxUsername.TabIndex = 4;
+            this.txtboxUsername.Leave += new System.EventHandler(this.TxtboxUsername_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(446, 19);
+            this.label2.Location = new System.Drawing.Point(486, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "User : ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // watchlist_MasterBindingSource
             // 
             this.watchlist_MasterBindingSource.DataMember = "Watchlist_Master";
-            this.watchlist_MasterBindingSource.DataSource = this.aZUREDBDataSet;
+            this.watchlist_MasterBindingSource.DataSource = this.aZUREDBDataSet1;
             // 
             // watchlist_MasterTableAdapter
             // 
@@ -261,9 +264,9 @@
             this.watchlist_FileBindingSource.DataMember = "FK_Watchlist_File_Watchlist_Master";
             this.watchlist_FileBindingSource.DataSource = this.watchlist_MasterBindingSource;
             // 
-            // watchlist_FileTableAdapter
+            // watchlist_dwgBindingSource2TableAdapter
             // 
-            this.watchlist_FileTableAdapter.ClearBeforeFill = true;
+            this.watchlist_dwgBindingSource2TableAdapter.ClearBeforeFill = true;
             // 
             // watchlist_FileBindingSource1
             // 
@@ -278,7 +281,7 @@
             // watchlist_MasterBindingSource1
             // 
             this.watchlist_MasterBindingSource1.DataMember = "Watchlist_Master";
-            this.watchlist_MasterBindingSource1.DataSource = this.aZUREDBDataSet;
+            this.watchlist_MasterBindingSource1.DataSource = this.aZUREDBDataSet1;
             // 
             // watchlist_MasterDataGridView
             // 
@@ -297,14 +300,173 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.watchlist_MasterDataGridView.DataSource = this.watchlist_MasterBindingSource1;
-            this.watchlist_MasterDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.watchlist_MasterDataGridView.Location = new System.Drawing.Point(0, 101);
+            this.watchlist_MasterDataGridView.Location = new System.Drawing.Point(0, 107);
             this.watchlist_MasterDataGridView.Name = "watchlist_MasterDataGridView";
             this.watchlist_MasterDataGridView.RowHeadersWidth = 20;
             this.watchlist_MasterDataGridView.RowTemplate.Height = 21;
             this.watchlist_MasterDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.watchlist_MasterDataGridView.Size = new System.Drawing.Size(1084, 518);
+            this.watchlist_MasterDataGridView.Size = new System.Drawing.Size(998, 169);
             this.watchlist_MasterDataGridView.TabIndex = 3;
+            // 
+            // watchlist_dwgBindingSource2
+            // 
+            this.watchlist_dwgBindingSource2.DataMember = "FK_Watchlist_dwg_Watchlist_Master";
+            this.watchlist_dwgBindingSource2.DataSource = this.watchlist_MasterBindingSource1;
+            // 
+            // watchlist_FileBindingSource2
+            // 
+            this.watchlist_FileBindingSource2.DataMember = "FK_Watchlist_File_Watchlist_Master";
+            this.watchlist_FileBindingSource2.DataSource = this.watchlist_MasterBindingSource1;
+            // 
+            // watchlist_FileListBox
+            // 
+            this.watchlist_FileListBox.AllowDrop = true;
+            this.watchlist_FileListBox.DataSource = this.watchlist_FileBindingSource2;
+            this.watchlist_FileListBox.DisplayMember = "Filename";
+            this.watchlist_FileListBox.FormattingEnabled = true;
+            this.watchlist_FileListBox.ItemHeight = 17;
+            this.watchlist_FileListBox.Location = new System.Drawing.Point(330, 23);
+            this.watchlist_FileListBox.Name = "watchlist_FileListBox";
+            this.watchlist_FileListBox.Size = new System.Drawing.Size(351, 157);
+            this.watchlist_FileListBox.TabIndex = 3;
+            this.watchlist_FileListBox.ValueMember = "Filename";
+            this.watchlist_FileListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.Watchlist_FileListBox_DragDrop);
+            this.watchlist_FileListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.Watchlist_FileListBox_DragEnter);
+            this.watchlist_FileListBox.DoubleClick += new System.EventHandler(this.Watchlist_FileListBox_DoubleClick);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.FileNameTextBox2);
+            this.panel2.Controls.Add(this.UploadWithFiledialog2);
+            this.panel2.Controls.Add(this.filenameTextBox1);
+            this.panel2.Controls.Add(remark2Label);
+            this.panel2.Controls.Add(this.remark2TextBox);
+            this.panel2.Controls.Add(this.Delete);
+            this.panel2.Controls.Add(this.UploadWithFileDialog);
+            this.panel2.Controls.Add(this.Delete2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.watchlist_FileListBox);
+            this.panel2.Controls.Add(this.watchlist_dwgListBox);
+            this.panel2.Location = new System.Drawing.Point(0, 290);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1294, 327);
+            this.panel2.TabIndex = 4;
+            // 
+            // FileNameTextBox2
+            // 
+            this.FileNameTextBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.FileNameTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FileNameTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_dwgBindingSource2, "Dwgfilename", true));
+            this.FileNameTextBox2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.FileNameTextBox2.Location = new System.Drawing.Point(687, 156);
+            this.FileNameTextBox2.Name = "FileNameTextBox2";
+            this.FileNameTextBox2.Size = new System.Drawing.Size(162, 17);
+            this.FileNameTextBox2.TabIndex = 29;
+            this.FileNameTextBox2.TabStop = false;
+            this.FileNameTextBox2.TextChanged += new System.EventHandler(this.FileNameTextBox2_TextChanged);
+            // 
+            // UploadWithFiledialog2
+            // 
+            this.UploadWithFiledialog2.Location = new System.Drawing.Point(687, 202);
+            this.UploadWithFiledialog2.Name = "UploadWithFiledialog2";
+            this.UploadWithFiledialog2.Size = new System.Drawing.Size(162, 30);
+            this.UploadWithFiledialog2.TabIndex = 27;
+            this.UploadWithFiledialog2.Text = "UploadWithFileDialog";
+            this.UploadWithFiledialog2.UseVisualStyleBackColor = true;
+            this.UploadWithFiledialog2.Click += new System.EventHandler(this.UploadWithFiledialog2_Click);
+            // 
+            // filenameTextBox1
+            // 
+            this.filenameTextBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.filenameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.filenameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_FileBindingSource2, "Filename", true));
+            this.filenameTextBox1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.filenameTextBox1.Location = new System.Drawing.Point(687, 133);
+            this.filenameTextBox1.Name = "filenameTextBox1";
+            this.filenameTextBox1.Size = new System.Drawing.Size(133, 17);
+            this.filenameTextBox1.TabIndex = 26;
+            this.filenameTextBox1.TabStop = false;
+            // 
+            // remark2TextBox
+            // 
+            this.remark2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_MasterBindingSource1, "Remark2", true));
+            this.remark2TextBox.Location = new System.Drawing.Point(12, 23);
+            this.remark2TextBox.Multiline = true;
+            this.remark2TextBox.Name = "remark2TextBox";
+            this.remark2TextBox.Size = new System.Drawing.Size(312, 284);
+            this.remark2TextBox.TabIndex = 9;
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(687, 60);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 30);
+            this.Delete.TabIndex = 8;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click_1);
+            // 
+            // UploadWithFileDialog
+            // 
+            this.UploadWithFileDialog.Location = new System.Drawing.Point(687, 24);
+            this.UploadWithFileDialog.Name = "UploadWithFileDialog";
+            this.UploadWithFileDialog.Size = new System.Drawing.Size(162, 30);
+            this.UploadWithFileDialog.TabIndex = 7;
+            this.UploadWithFileDialog.Text = "UploadWithFileDialog";
+            this.UploadWithFileDialog.UseVisualStyleBackColor = true;
+            this.UploadWithFileDialog.Click += new System.EventHandler(this.UploadWithFileDialog_Click);
+            // 
+            // Delete2
+            // 
+            this.Delete2.Location = new System.Drawing.Point(687, 238);
+            this.Delete2.Name = "Delete2";
+            this.Delete2.Size = new System.Drawing.Size(75, 30);
+            this.Delete2.TabIndex = 6;
+            this.Delete2.Text = "Delete";
+            this.Delete2.UseVisualStyleBackColor = true;
+            this.Delete2.Click += new System.EventHandler(this.Delete2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Green;
+            this.label4.Location = new System.Drawing.Point(330, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(183, 17);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Work Drawing / Documents";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Green;
+            this.label3.Location = new System.Drawing.Point(326, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(415, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Files/Message (Double click to open / Drug and Drop to Upload)";
+            // 
+            // watchlist_dwgListBox
+            // 
+            this.watchlist_dwgListBox.DataSource = this.watchlist_dwgBindingSource2;
+            this.watchlist_dwgListBox.DisplayMember = "Dwgfilename";
+            this.watchlist_dwgListBox.FormattingEnabled = true;
+            this.watchlist_dwgListBox.ItemHeight = 17;
+            this.watchlist_dwgListBox.Location = new System.Drawing.Point(330, 202);
+            this.watchlist_dwgListBox.Name = "watchlist_dwgListBox";
+            this.watchlist_dwgListBox.Size = new System.Drawing.Size(351, 106);
+            this.watchlist_dwgListBox.TabIndex = 3;
+            this.watchlist_dwgListBox.ValueMember = "Dwgfilename";
+            this.watchlist_dwgListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.Watchlist_dwgListBox_DragDrop);
+            this.watchlist_dwgListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.Watchlist_dwgListBox_DragEnter);
+            this.watchlist_dwgListBox.DoubleClick += new System.EventHandler(this.Watchlist_dwgListBox_DoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -329,6 +491,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "ShipID";
             this.dataGridViewTextBoxColumn3.HeaderText = "ShipID";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
             this.dataGridViewTextBoxColumn3.Width = 75;
             // 
             // dataGridViewTextBoxColumn4
@@ -369,6 +532,7 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "DateCom";
             this.dataGridViewTextBoxColumn8.HeaderText = "DateCom";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn8.Width = 93;
             // 
             // dataGridViewTextBoxColumn9
@@ -390,157 +554,28 @@
             // 
             // dataGridViewTextBoxColumn11
             // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Remark";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Update";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 79;
             // 
-            // watchlist_dwgBindingSource2
+            // checkBox1
             // 
-            this.watchlist_dwgBindingSource2.DataMember = "FK_Watchlist_dwg_Watchlist_Master";
-            this.watchlist_dwgBindingSource2.DataSource = this.watchlist_MasterBindingSource1;
-            // 
-            // watchlist_FileBindingSource2
-            // 
-            this.watchlist_FileBindingSource2.DataMember = "FK_Watchlist_File_Watchlist_Master";
-            this.watchlist_FileBindingSource2.DataSource = this.watchlist_MasterBindingSource1;
-            // 
-            // watchlist_FileListBox
-            // 
-            this.watchlist_FileListBox.AllowDrop = true;
-            this.watchlist_FileListBox.DataSource = this.watchlist_FileBindingSource2;
-            this.watchlist_FileListBox.DisplayMember = "Filename";
-            this.watchlist_FileListBox.FormattingEnabled = true;
-            this.watchlist_FileListBox.ItemHeight = 17;
-            this.watchlist_FileListBox.Location = new System.Drawing.Point(542, 22);
-            this.watchlist_FileListBox.Name = "watchlist_FileListBox";
-            this.watchlist_FileListBox.Size = new System.Drawing.Size(351, 157);
-            this.watchlist_FileListBox.TabIndex = 3;
-            this.watchlist_FileListBox.ValueMember = "Filename";
-            this.watchlist_FileListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.watchlist_FileListBox_DragDrop);
-            this.watchlist_FileListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.watchlist_FileListBox_DragEnter);
-            this.watchlist_FileListBox.DoubleClick += new System.EventHandler(this.watchlist_FileListBox_DoubleClick);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.filenameTextBox1);
-            this.panel2.Controls.Add(remark2Label);
-            this.panel2.Controls.Add(this.remark2TextBox);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.BTNuploadwithdialog);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.watchlist_FileListBox);
-            this.panel2.Controls.Add(this.watchlist_dwgListBox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 254);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1084, 365);
-            this.panel2.TabIndex = 4;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(899, 201);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(180, 30);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Upload with file dialog";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // filenameTextBox1
-            // 
-            this.filenameTextBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.filenameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.filenameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_FileBindingSource2, "Filename", true));
-            this.filenameTextBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.filenameTextBox1.Location = new System.Drawing.Point(784, 179);
-            this.filenameTextBox1.Name = "filenameTextBox1";
-            this.filenameTextBox1.Size = new System.Drawing.Size(28, 17);
-            this.filenameTextBox1.TabIndex = 26;
-            this.filenameTextBox1.TabStop = false;
-            // 
-            // remark2TextBox
-            // 
-            this.remark2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_MasterBindingSource1, "Remark2", true));
-            this.remark2TextBox.Location = new System.Drawing.Point(12, 23);
-            this.remark2TextBox.Multiline = true;
-            this.remark2TextBox.Name = "remark2TextBox";
-            this.remark2TextBox.Size = new System.Drawing.Size(524, 284);
-            this.remark2TextBox.TabIndex = 9;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(899, 59);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 30);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Delete";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // BTNuploadwithdialog
-            // 
-            this.BTNuploadwithdialog.Location = new System.Drawing.Point(899, 23);
-            this.BTNuploadwithdialog.Name = "BTNuploadwithdialog";
-            this.BTNuploadwithdialog.Size = new System.Drawing.Size(180, 30);
-            this.BTNuploadwithdialog.TabIndex = 7;
-            this.BTNuploadwithdialog.Text = "Upload with file dialog";
-            this.BTNuploadwithdialog.UseVisualStyleBackColor = true;
-            this.BTNuploadwithdialog.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(899, 237);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 30);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Green;
-            this.label4.Location = new System.Drawing.Point(542, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Work Drawing / Documents";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(538, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(415, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Files/Message (Double click to open / Drug and Drop to Upload)";
-            // 
-            // watchlist_dwgListBox
-            // 
-            this.watchlist_dwgListBox.DataSource = this.watchlist_dwgBindingSource2;
-            this.watchlist_dwgListBox.DisplayMember = "Dwgfilename";
-            this.watchlist_dwgListBox.FormattingEnabled = true;
-            this.watchlist_dwgListBox.ItemHeight = 17;
-            this.watchlist_dwgListBox.Location = new System.Drawing.Point(542, 201);
-            this.watchlist_dwgListBox.Name = "watchlist_dwgListBox";
-            this.watchlist_dwgListBox.Size = new System.Drawing.Size(351, 106);
-            this.watchlist_dwgListBox.TabIndex = 3;
-            this.watchlist_dwgListBox.ValueMember = "DrawingID";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(733, 64);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(96, 21);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1084, 619);
+            this.ClientSize = new System.Drawing.Size(1294, 617);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.watchlist_MasterDataGridView);
             this.Controls.Add(this.panel1);
@@ -549,7 +584,7 @@
             this.Name = "Form1";
             this.Text = " watchlist";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -573,7 +608,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxShipname;
         private System.Windows.Forms.Button buttonShowAllship;
-        private AZUREDBDataSet aZUREDBDataSet;
+        private AZUREDBDataSet aZUREDBDataSet1;
         private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
         private AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter;
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
@@ -583,7 +618,7 @@
         private System.Windows.Forms.BindingSource watchlist_dwgBindingSource;
         private AZUREDBDataSetTableAdapters.Watchlist_dwgTableAdapter watchlist_dwgTableAdapter;
         private System.Windows.Forms.BindingSource watchlist_FileBindingSource;
-        private AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter watchlist_FileTableAdapter;
+        private AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter watchlist_dwgBindingSource2TableAdapter;
         private System.Windows.Forms.BindingSource watchlist_FileBindingSource1;
         private System.Windows.Forms.BindingSource watchlist_dwgBindingSource1;
         private System.Windows.Forms.BindingSource watchlist_MasterBindingSource1;
@@ -594,17 +629,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtboxUsername;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label timeNow;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SaveAll;
+        private System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.Button AddNewItemToTheList;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Delete2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button BTNuploadwithdialog;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button UploadWithFileDialog;
         private System.Windows.Forms.TextBox remark2TextBox;
+        private System.Windows.Forms.TextBox filenameTextBox1;
+        private System.Windows.Forms.ListBox watchlist_dwgListBox;
+        private System.Windows.Forms.Button UploadWithFiledialog2;
+        private System.Windows.Forms.Label timenow;
+        private System.Windows.Forms.TextBox FileNameTextBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -616,9 +655,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.TextBox filenameTextBox1;
-        private System.Windows.Forms.ListBox watchlist_dwgListBox;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

@@ -117,3 +117,5 @@ C:\Users\170202\Source\Repos\kokoiti7\TemmariTime-Program\WindowsFormsApp3\obj\D
 C:\Users\170202\Source\Repos\kokoiti7\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
 C:\Users\170202\Source\Repos\kokoiti7\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\170202\Source\Repos\kokoiti7\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Blobtree.resources
+C:\Users\tech-01-adm\Source\Repos\TemmariTime-Program\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form4.resources
