@@ -51,30 +51,13 @@
             this.SelectedRemove = new System.Windows.Forms.Button();
             this.NonbudgetItemReconcileBoard = new System.Windows.Forms.Label();
             this.dataExchange_CommentDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataExchange_feeDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataExchangeDataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.SelectedRemoves = new System.Windows.Forms.Button();
-            this.NewAddsItem = new System.Windows.Forms.Button();
-            this.timeNow = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.SelectShip = new System.Windows.Forms.Label();
-            this.User = new System.Windows.Forms.Label();
-            this.treeView = new System.Windows.Forms.TreeView();
-            this.Delete = new System.Windows.Forms.Button();
-            this.Donwload = new System.Windows.Forms.Button();
-            this.Upload = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataExchange_CommentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet1 = new WindowsFormsApp3.AZUREDBDataSet1();
+            this.dataExchange_feeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +78,7 @@
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataExchange_feeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet = new WindowsFormsApp3.AZUREDBDataSet();
+            this.dataExchangeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,6 +101,21 @@
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataExchangeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.SelectedRemoves = new System.Windows.Forms.Button();
+            this.NewAddsItem = new System.Windows.Forms.Button();
+            this.timeNow = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.SelectShip = new System.Windows.Forms.Label();
+            this.User = new System.Windows.Forms.Label();
+            this.treeView = new System.Windows.Forms.TreeView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Donwload = new System.Windows.Forms.Button();
+            this.Upload = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataExchange_feeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchange_feeTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.dataExchangeTableAdapter = new WindowsFormsApp3.AZUREDBDataSetTableAdapters.DataExchangeTableAdapter();
@@ -124,8 +123,13 @@
             this.dataExchange_CommentTableAdapter = new WindowsFormsApp3.AZUREDBDataSet1TableAdapters.DataExchange_CommentTableAdapter();
             this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -133,11 +137,6 @@
             this.splitContainer1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -246,7 +245,7 @@
             this.AddComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddComment.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.AddComment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AddComment.Location = new System.Drawing.Point(931, 96);
+            this.AddComment.Location = new System.Drawing.Point(925, 96);
             this.AddComment.Name = "AddComment";
             this.AddComment.Size = new System.Drawing.Size(197, 26);
             this.AddComment.TabIndex = 24;
@@ -258,7 +257,7 @@
             // 
             this.RemoveComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RemoveComment.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.RemoveComment.Location = new System.Drawing.Point(1179, 96);
+            this.RemoveComment.Location = new System.Drawing.Point(1173, 96);
             this.RemoveComment.Name = "RemoveComment";
             this.RemoveComment.Size = new System.Drawing.Size(194, 25);
             this.RemoveComment.TabIndex = 25;
@@ -300,275 +299,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataExchange_CommentDataGridView.DataSource = this.dataExchange_CommentBindingSource1;
-            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(931, 131);
+            this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(925, 131);
             this.dataExchange_CommentDataGridView.Name = "dataExchange_CommentDataGridView";
             this.dataExchange_CommentDataGridView.RowHeadersVisible = false;
             this.dataExchange_CommentDataGridView.RowTemplate.Height = 21;
             this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(446, 106);
             this.dataExchange_CommentDataGridView.TabIndex = 39;
-            // 
-            // dataExchange_feeDataGridView
-            // 
-            this.dataExchange_feeDataGridView.AllowUserToAddRows = false;
-            this.dataExchange_feeDataGridView.AllowUserToDeleteRows = false;
-            this.dataExchange_feeDataGridView.AllowUserToOrderColumns = true;
-            this.dataExchange_feeDataGridView.AutoGenerateColumns = false;
-            this.dataExchange_feeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataExchange_feeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewCheckBoxColumn1,
-            this.dataGridViewCheckBoxColumn2});
-            this.dataExchange_feeDataGridView.DataSource = this.dataExchange_feeBindingSource1;
-            this.dataExchange_feeDataGridView.Location = new System.Drawing.Point(12, 249);
-            this.dataExchange_feeDataGridView.Name = "dataExchange_feeDataGridView";
-            this.dataExchange_feeDataGridView.RowTemplate.Height = 21;
-            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(1361, 105);
-            this.dataExchange_feeDataGridView.TabIndex = 39;
-            // 
-            // dataExchangeDataGridView
-            // 
-            this.dataExchangeDataGridView.AllowUserToAddRows = false;
-            this.dataExchangeDataGridView.AllowUserToDeleteRows = false;
-            this.dataExchangeDataGridView.AllowUserToOrderColumns = true;
-            this.dataExchangeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataExchangeDataGridView.AutoGenerateColumns = false;
-            this.dataExchangeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataExchangeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29,
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn31,
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn34,
-            this.dataGridViewTextBoxColumn33,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewCheckBoxColumn3,
-            this.dataGridViewCheckBoxColumn4});
-            this.dataExchangeDataGridView.DataSource = this.dataExchangeBindingSource2;
-            this.dataExchangeDataGridView.Location = new System.Drawing.Point(12, 546);
-            this.dataExchangeDataGridView.Name = "dataExchangeDataGridView";
-            this.dataExchangeDataGridView.RowTemplate.Height = 21;
-            this.dataExchangeDataGridView.Size = new System.Drawing.Size(1361, 433);
-            this.dataExchangeDataGridView.TabIndex = 39;
-            // 
-            // panel1
-            // 
-            this.panel1.AllowDrop = true;
-            this.panel1.Controls.Add(this.NextMonth);
-            this.panel1.Controls.Add(this.BackMonth);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.SelectMonth);
-            this.panel1.Location = new System.Drawing.Point(6, 199);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(423, 28);
-            this.panel1.TabIndex = 41;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.maskedTextBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.AddComment);
-            this.splitContainer1.Panel1.Controls.Add(this.SelectedRemoves);
-            this.splitContainer1.Panel1.Controls.Add(this.NewAddsItem);
-            this.splitContainer1.Panel1.Controls.Add(this.RemoveComment);
-            this.splitContainer1.Panel1.Controls.Add(this.timeNow);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.panel3);
-            this.splitContainer1.Panel1.Controls.Add(this.panel2);
-            this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.splitContainer1.Panel1.Controls.Add(this.dataExchange_CommentDataGridView);
-            this.splitContainer1.Panel1.Controls.Add(this.NonbudgetItemReconcileBoard);
-            this.splitContainer1.Panel1.Controls.Add(this.User);
-            this.splitContainer1.Panel1.Controls.Add(this.dataExchange_feeDataGridView);
-            this.splitContainer1.Panel1.Controls.Add(this.dataExchangeDataGridView);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.Controls.Add(this.treeView);
-            this.splitContainer1.Panel2.Controls.Add(this.Delete);
-            this.splitContainer1.Panel2.Controls.Add(this.Donwload);
-            this.splitContainer1.Panel2.Controls.Add(this.Upload);
-            this.splitContainer1.Size = new System.Drawing.Size(1924, 982);
-            this.splitContainer1.SplitterDistance = 1376;
-            this.splitContainer1.TabIndex = 44;
-            // 
-            // SelectedRemoves
-            // 
-            this.SelectedRemoves.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.SelectedRemoves.Location = new System.Drawing.Point(689, 400);
-            this.SelectedRemoves.Name = "SelectedRemoves";
-            this.SelectedRemoves.Size = new System.Drawing.Size(225, 26);
-            this.SelectedRemoves.TabIndex = 52;
-            this.SelectedRemoves.Text = "SelectedRemoves";
-            this.SelectedRemoves.UseVisualStyleBackColor = true;
-            this.SelectedRemoves.Click += new System.EventHandler(this.SelectedRemoves_Click);
-            // 
-            // NewAddsItem
-            // 
-            this.NewAddsItem.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.NewAddsItem.Location = new System.Drawing.Point(445, 399);
-            this.NewAddsItem.Name = "NewAddsItem";
-            this.NewAddsItem.Size = new System.Drawing.Size(225, 27);
-            this.NewAddsItem.TabIndex = 51;
-            this.NewAddsItem.Text = "NewAddsItem";
-            this.NewAddsItem.UseVisualStyleBackColor = true;
-            this.NewAddsItem.Click += new System.EventHandler(this.NewAddsItem_Click);
-            // 
-            // timeNow
-            // 
-            this.timeNow.AutoSize = true;
-            this.timeNow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timeNow.Location = new System.Drawing.Point(6, 68);
-            this.timeNow.Name = "timeNow";
-            this.timeNow.Size = new System.Drawing.Size(37, 15);
-            this.timeNow.TabIndex = 50;
-            this.timeNow.Text = "Time";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(48, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(381, 25);
-            this.textBox2.TabIndex = 50;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.GrandTotal);
-            this.panel3.Controls.Add(this.SelectedRemove);
-            this.panel3.Controls.Add(this.AllRecord);
-            this.panel3.Controls.Add(this.NewAddItem);
-            this.panel3.Location = new System.Drawing.Point(449, 25);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(476, 191);
-            this.panel3.TabIndex = 48;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.SelectShip);
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Location = new System.Drawing.Point(6, 142);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 29);
-            this.panel2.TabIndex = 47;
-            // 
-            // SelectShip
-            // 
-            this.SelectShip.AutoSize = true;
-            this.SelectShip.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SelectShip.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.SelectShip.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.SelectShip.Location = new System.Drawing.Point(0, 0);
-            this.SelectShip.Name = "SelectShip";
-            this.SelectShip.Size = new System.Drawing.Size(74, 17);
-            this.SelectShip.TabIndex = 47;
-            this.SelectShip.Text = "SelectShip";
-            // 
-            // User
-            // 
-            this.User.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.User.AutoSize = true;
-            this.User.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.User.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.User.Location = new System.Drawing.Point(6, 97);
-            this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(36, 17);
-            this.User.TabIndex = 45;
-            this.User.Text = "User";
-            // 
-            // treeView
-            // 
-            this.treeView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeView.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.treeView.Location = new System.Drawing.Point(30, 17);
-            this.treeView.Name = "treeView";
-            this.treeView.Size = new System.Drawing.Size(485, 759);
-            this.treeView.TabIndex = 45;
-            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView_AfterSelect);
-            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView_NodeMouseDoubleClick);
-            // 
-            // Delete
-            // 
-            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Delete.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete.Location = new System.Drawing.Point(30, 807);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(481, 37);
-            this.Delete.TabIndex = 44;
-            this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = true;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // Donwload
-            // 
-            this.Donwload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Donwload.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Donwload.Location = new System.Drawing.Point(30, 850);
-            this.Donwload.Name = "Donwload";
-            this.Donwload.Size = new System.Drawing.Size(481, 37);
-            this.Donwload.TabIndex = 42;
-            this.Donwload.Text = "Download";
-            this.Donwload.UseVisualStyleBackColor = true;
-            this.Donwload.Click += new System.EventHandler(this.Download_Click);
-            // 
-            // Upload
-            // 
-            this.Upload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Upload.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Upload.Location = new System.Drawing.Point(30, 893);
-            this.Upload.Name = "Upload";
-            this.Upload.Size = new System.Drawing.Size(481, 37);
-            this.Upload.TabIndex = 41;
-            this.Upload.Text = "Upload";
-            this.Upload.UseVisualStyleBackColor = true;
-            this.Upload.Click += new System.EventHandler(this.Upload_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(990, 407);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 19);
-            this.maskedTextBox1.TabIndex = 46;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -618,6 +354,39 @@
             // 
             this.aZUREDBDataSet1.DataSetName = "AZUREDBDataSet1";
             this.aZUREDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataExchange_feeDataGridView
+            // 
+            this.dataExchange_feeDataGridView.AllowUserToAddRows = false;
+            this.dataExchange_feeDataGridView.AllowUserToDeleteRows = false;
+            this.dataExchange_feeDataGridView.AllowUserToOrderColumns = true;
+            this.dataExchange_feeDataGridView.AutoGenerateColumns = false;
+            this.dataExchange_feeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataExchange_feeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewCheckBoxColumn2});
+            this.dataExchange_feeDataGridView.DataSource = this.dataExchange_feeBindingSource1;
+            this.dataExchange_feeDataGridView.Location = new System.Drawing.Point(12, 249);
+            this.dataExchange_feeDataGridView.Name = "dataExchange_feeDataGridView";
+            this.dataExchange_feeDataGridView.RowTemplate.Height = 21;
+            this.dataExchange_feeDataGridView.Size = new System.Drawing.Size(1361, 105);
+            this.dataExchange_feeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -774,6 +543,44 @@
             // 
             this.aZUREDBDataSet.DataSetName = "AZUREDBDataSet";
             this.aZUREDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataExchangeDataGridView
+            // 
+            this.dataExchangeDataGridView.AllowUserToAddRows = false;
+            this.dataExchangeDataGridView.AllowUserToDeleteRows = false;
+            this.dataExchangeDataGridView.AllowUserToOrderColumns = true;
+            this.dataExchangeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataExchangeDataGridView.AutoGenerateColumns = false;
+            this.dataExchangeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataExchangeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewCheckBoxColumn3,
+            this.dataGridViewCheckBoxColumn4});
+            this.dataExchangeDataGridView.DataSource = this.dataExchangeBindingSource2;
+            this.dataExchangeDataGridView.Location = new System.Drawing.Point(12, 546);
+            this.dataExchangeDataGridView.Name = "dataExchangeDataGridView";
+            this.dataExchangeDataGridView.RowTemplate.Height = 21;
+            this.dataExchangeDataGridView.Size = new System.Drawing.Size(1361, 433);
+            this.dataExchangeDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn21
             // 
@@ -932,6 +739,190 @@
             this.dataExchangeBindingSource2.DataMember = "DataExchange";
             this.dataExchangeBindingSource2.DataSource = this.aZUREDBDataSet;
             // 
+            // panel1
+            // 
+            this.panel1.AllowDrop = true;
+            this.panel1.Controls.Add(this.NextMonth);
+            this.panel1.Controls.Add(this.BackMonth);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.SelectMonth);
+            this.panel1.Location = new System.Drawing.Point(6, 199);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(423, 28);
+            this.panel1.TabIndex = 41;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.AddComment);
+            this.splitContainer1.Panel1.Controls.Add(this.SelectedRemoves);
+            this.splitContainer1.Panel1.Controls.Add(this.NewAddsItem);
+            this.splitContainer1.Panel1.Controls.Add(this.RemoveComment);
+            this.splitContainer1.Panel1.Controls.Add(this.timeNow);
+            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.panel3);
+            this.splitContainer1.Panel1.Controls.Add(this.panel2);
+            this.splitContainer1.Panel1.Controls.Add(this.panel1);
+            this.splitContainer1.Panel1.Controls.Add(this.dataExchange_CommentDataGridView);
+            this.splitContainer1.Panel1.Controls.Add(this.NonbudgetItemReconcileBoard);
+            this.splitContainer1.Panel1.Controls.Add(this.User);
+            this.splitContainer1.Panel1.Controls.Add(this.dataExchange_feeDataGridView);
+            this.splitContainer1.Panel1.Controls.Add(this.dataExchangeDataGridView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.treeView);
+            this.splitContainer1.Panel2.Controls.Add(this.Delete);
+            this.splitContainer1.Panel2.Controls.Add(this.Donwload);
+            this.splitContainer1.Panel2.Controls.Add(this.Upload);
+            this.splitContainer1.Size = new System.Drawing.Size(1916, 982);
+            this.splitContainer1.SplitterDistance = 1370;
+            this.splitContainer1.TabIndex = 44;
+            // 
+            // SelectedRemoves
+            // 
+            this.SelectedRemoves.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SelectedRemoves.Location = new System.Drawing.Point(689, 400);
+            this.SelectedRemoves.Name = "SelectedRemoves";
+            this.SelectedRemoves.Size = new System.Drawing.Size(225, 26);
+            this.SelectedRemoves.TabIndex = 52;
+            this.SelectedRemoves.Text = "SelectedRemoves";
+            this.SelectedRemoves.UseVisualStyleBackColor = true;
+            this.SelectedRemoves.Click += new System.EventHandler(this.SelectedRemoves_Click);
+            // 
+            // NewAddsItem
+            // 
+            this.NewAddsItem.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NewAddsItem.Location = new System.Drawing.Point(445, 399);
+            this.NewAddsItem.Name = "NewAddsItem";
+            this.NewAddsItem.Size = new System.Drawing.Size(225, 27);
+            this.NewAddsItem.TabIndex = 51;
+            this.NewAddsItem.Text = "NewAddsItem";
+            this.NewAddsItem.UseVisualStyleBackColor = true;
+            this.NewAddsItem.Click += new System.EventHandler(this.NewAddsItem_Click);
+            // 
+            // timeNow
+            // 
+            this.timeNow.AutoSize = true;
+            this.timeNow.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.timeNow.Location = new System.Drawing.Point(6, 68);
+            this.timeNow.Name = "timeNow";
+            this.timeNow.Size = new System.Drawing.Size(37, 15);
+            this.timeNow.TabIndex = 50;
+            this.timeNow.Text = "Time";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox2.Location = new System.Drawing.Point(48, 97);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(381, 25);
+            this.textBox2.TabIndex = 50;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.GrandTotal);
+            this.panel3.Controls.Add(this.SelectedRemove);
+            this.panel3.Controls.Add(this.AllRecord);
+            this.panel3.Controls.Add(this.NewAddItem);
+            this.panel3.Location = new System.Drawing.Point(449, 25);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(476, 191);
+            this.panel3.TabIndex = 48;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.SelectShip);
+            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Location = new System.Drawing.Point(6, 142);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(423, 29);
+            this.panel2.TabIndex = 47;
+            // 
+            // SelectShip
+            // 
+            this.SelectShip.AutoSize = true;
+            this.SelectShip.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SelectShip.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SelectShip.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.SelectShip.Location = new System.Drawing.Point(0, 0);
+            this.SelectShip.Name = "SelectShip";
+            this.SelectShip.Size = new System.Drawing.Size(74, 17);
+            this.SelectShip.TabIndex = 47;
+            this.SelectShip.Text = "SelectShip";
+            // 
+            // User
+            // 
+            this.User.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.User.AutoSize = true;
+            this.User.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.User.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.User.Location = new System.Drawing.Point(6, 97);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(36, 17);
+            this.User.TabIndex = 45;
+            this.User.Text = "User";
+            // 
+            // treeView
+            // 
+            this.treeView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeView.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.treeView.Location = new System.Drawing.Point(28, 17);
+            this.treeView.Name = "treeView";
+            this.treeView.Size = new System.Drawing.Size(485, 759);
+            this.treeView.TabIndex = 45;
+            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView_AfterSelect);
+            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView_NodeMouseDoubleClick);
+            // 
+            // Delete
+            // 
+            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Delete.Location = new System.Drawing.Point(28, 807);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(481, 37);
+            this.Delete.TabIndex = 44;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Donwload
+            // 
+            this.Donwload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Donwload.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Donwload.Location = new System.Drawing.Point(28, 850);
+            this.Donwload.Name = "Donwload";
+            this.Donwload.Size = new System.Drawing.Size(481, 37);
+            this.Donwload.TabIndex = 42;
+            this.Donwload.Text = "Download";
+            this.Donwload.UseVisualStyleBackColor = true;
+            this.Donwload.Click += new System.EventHandler(this.Download_Click);
+            // 
+            // Upload
+            // 
+            this.Upload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Upload.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Upload.Location = new System.Drawing.Point(28, 893);
+            this.Upload.Name = "Upload";
+            this.Upload.Size = new System.Drawing.Size(481, 37);
+            this.Upload.TabIndex = 41;
+            this.Upload.Text = "Upload";
+            this.Upload.UseVisualStyleBackColor = true;
+            this.Upload.Click += new System.EventHandler(this.Upload_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
+            // 
             // dataExchange_feeTableAdapter
             // 
             this.dataExchange_feeTableAdapter.ClearBeforeFill = true;
@@ -967,7 +958,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1924, 982);
+            this.ClientSize = new System.Drawing.Size(1916, 982);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -975,8 +966,13 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -987,11 +983,6 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_CommentBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1082,7 +1073,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 

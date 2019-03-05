@@ -168,6 +168,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.DateVisible);
             this.panel1.Controls.Add(this.timenow);
             this.panel1.Controls.Add(this.SaveAll);
             this.panel1.Controls.Add(this.Refresh);
@@ -342,7 +343,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.DateVisible);
             this.panel2.Controls.Add(this.FileNameTextBox2);
             this.panel2.Controls.Add(this.UploadWithFiledialog2);
             this.panel2.Controls.Add(this.filenameTextBox1);
@@ -564,7 +564,7 @@
             // DateVisible
             // 
             this.DateVisible.AutoSize = true;
-            this.DateVisible.Location = new System.Drawing.Point(891, 25);
+            this.DateVisible.Location = new System.Drawing.Point(769, 62);
             this.DateVisible.Name = "DateVisible";
             this.DateVisible.Size = new System.Drawing.Size(132, 21);
             this.DateVisible.TabIndex = 10;
