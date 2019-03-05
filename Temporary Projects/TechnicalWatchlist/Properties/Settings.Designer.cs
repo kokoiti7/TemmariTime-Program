@@ -83,5 +83,17 @@ namespace TechnicalWatchlist.Properties {
                 this["ComboShip"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Cheackstring {
+            get {
+                return ((bool)(this["Cheackstring"]));
+            }
+            set {
+                this["Cheackstring"] = value;
+            }
+        }
     }
 }
