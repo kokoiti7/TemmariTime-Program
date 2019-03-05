@@ -80,7 +80,7 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.DateVisible = new System.Windows.Forms.CheckBox();
             remark2Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
@@ -129,6 +129,7 @@
             this.comboBoxShipname.Size = new System.Drawing.Size(222, 28);
             this.comboBoxShipname.TabIndex = 1;
             this.comboBoxShipname.Tag = "";
+            this.comboBoxShipname.SelectedIndexChanged += new System.EventHandler(this.comboBoxShipname_SelectedIndexChanged);
             this.comboBoxShipname.SelectionChangeCommitted += new System.EventHandler(this.ComboBoxShipname_SelectionChangeCommitted);
             // 
             // buttonShowAllship
@@ -167,7 +168,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.DateVisible);
             this.panel1.Controls.Add(this.timenow);
             this.panel1.Controls.Add(this.SaveAll);
             this.panel1.Controls.Add(this.Refresh);
@@ -560,15 +561,16 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.Width = 79;
             // 
-            // checkBox1
+            // DateVisible
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(733, 64);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 21);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.DateVisible.AutoSize = true;
+            this.DateVisible.Location = new System.Drawing.Point(745, 60);
+            this.DateVisible.Name = "DateVisible";
+            this.DateVisible.Size = new System.Drawing.Size(132, 21);
+            this.DateVisible.TabIndex = 10;
+            this.DateVisible.Text = "DateCloseVisible";
+            this.DateVisible.UseVisualStyleBackColor = true;
+            this.DateVisible.CheckedChanged += new System.EventHandler(this.DateVisible_CheckedChanged);
             // 
             // Form1
             // 
@@ -655,7 +657,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox DateVisible;
     }
 }
 

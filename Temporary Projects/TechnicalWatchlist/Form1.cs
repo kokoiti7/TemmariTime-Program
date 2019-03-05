@@ -91,10 +91,18 @@ namespace TechnicalWatchlist
 
         private void ButtonShowAllship_Click(object sender, EventArgs e)
         {
-            watchlist_MasterBindingSource1.RemoveFilter();
+            
+            if (DateVisible.Checked == true)
+            {
+
+                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed ' ' ");
 
 
-
+            }
+            else
+            {
+                watchlist_MasterBindingSource1.RemoveFilter();
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -519,8 +527,19 @@ namespace TechnicalWatchlist
 
         private void ComboBoxShipname_SelectionChangeCommitted(object sender, EventArgs e)
         {  
-            watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
 
+            if (DateVisible.Checked == true)
+            {
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
+                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed like ' '");
+
+
+            }
+            else
+            {
+
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
+            }
 
             Properties.Settings.Default.ComboShip = comboBoxShipname.SelectedIndex;
             Properties.Settings.Default.Save();
@@ -555,6 +574,23 @@ namespace TechnicalWatchlist
 
         }
 
+        private void DateVisible_CheckedChanged(object sender, EventArgs e)
+        {
+            if ( DateVisible.Checked == true ) {
 
+                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed like ' '");
+
+
+            }
+            else
+            {
+                watchlist_MasterBindingSource1.RemoveFilter();
+            }
+        }
+
+        private void comboBoxShipname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
