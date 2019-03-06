@@ -51,15 +51,9 @@ namespace TechnicalWatchlist
             //Username
             txtboxUsername.Text = Properties.Settings.Default.UserName;
 
-            DateVisible.Checked = Properties.Settings.Default.Cheackstring;
+           
+            watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
 
-            if (DateVisible.Checked == true)
-            {
-
-                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
-
-
-            }
 
             //ship_Master_TBBindingSource.Filter = "OwnerGroup = 1004";
             comboBoxShipname.DataSource = ship_Master_TBBindingSource;
@@ -102,17 +96,11 @@ namespace TechnicalWatchlist
         private void ButtonShowAllship_Click(object sender, EventArgs e)
         {
             
-            if (DateVisible.Checked == true)
-            {
 
                 watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
 
 
-            }
-            else if(DateVisible.Checked == false)
-            {
-                watchlist_MasterBindingSource1.RemoveFilter();
-            }
+
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -536,18 +524,9 @@ namespace TechnicalWatchlist
         private void ComboBoxShipname_SelectionChangeCommitted(object sender, EventArgs e)
         {
            
+            //重要ANDで書かないとシップネームとDateclosedでフィルターかけることができない
+            watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'" +  "AND Shipname like '{0:s}'", comboBoxShipname.Text);
 
-            if (DateVisible.Checked == true)
-            {
-                //重要ANDで書かないとシップネームとDateclosedでフィルターかけることができない
-                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'" +  "AND Shipname like '{0:s}'", comboBoxShipname.Text);
-
-            }
-            else if(DateVisible.Checked == false)
-            {
-
-
-            }
 
             Properties.Settings.Default.ComboShip = comboBoxShipname.SelectedIndex;
             Properties.Settings.Default.Save();
@@ -586,21 +565,12 @@ namespace TechnicalWatchlist
         private void DateVisible_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (DateVisible.Checked == true)
-            {
                
                 watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
 
 
-            }
-            else if (DateVisible.Checked == false)
-            {
                 watchlist_MasterBindingSource1.RemoveFilter();
-            }
-
-                Properties.Settings.Default.Cheackstring = DateVisible.Checked;
-                Properties.Settings.Default.Save();
-          
+     
         }
 
         private void comboBoxShipname_SelectedIndexChanged(object sender, EventArgs e)
