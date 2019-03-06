@@ -17,8 +17,9 @@ namespace TechnicalWatchlist
 {
     public partial class Form1 : Form
     {
-        string cell;
 
+        string frm2name;
+        int frm2namelen =0;
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +35,9 @@ namespace TechnicalWatchlist
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            // TODO: このコード行はデータを 'aZUREDBDataSet1.Watchlist_F103' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.watchlist_F103TableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_F103);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Watchlist_File' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.watchlist_dwgBindingSource2TableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_File);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Watchlist_dwg' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -43,17 +47,18 @@ namespace TechnicalWatchlist
 
             this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet1.Ship_Master_TB);
 
-
             watchlist_MasterDataGridView.Sort(watchlist_MasterDataGridView.Columns[0], ListSortDirection.Descending);
 
             watchlist_MasterBindingSource1.RemoveFilter();
           
-            //Username
             txtboxUsername.Text = Properties.Settings.Default.UserName;
 
            
-            watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
+            if (InProgressButton.Checked == true)
+            {
+                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
 
+            }
 
             //ship_Master_TBBindingSource.Filter = "OwnerGroup = 1004";
             comboBoxShipname.DataSource = ship_Master_TBBindingSource;
@@ -61,8 +66,7 @@ namespace TechnicalWatchlist
             comboBoxShipname.ValueMember = "ID";
             comboBoxShipname.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxShipname.SelectedIndex = Properties.Settings.Default.ComboShip;
-
-            watchlist_FileBindingSource2.Sort = "ShipID 100001";
+            
 
             //Timer
             SetDisplaytime();
@@ -81,7 +85,7 @@ namespace TechnicalWatchlist
         {
 
             int len = txtboxUsername.Text.Length;
-
+   
             if (len < 1)
 
                 //ドラッグされたデータ形式を調べ、ファイルのときはコピーとする
@@ -96,8 +100,21 @@ namespace TechnicalWatchlist
         private void ButtonShowAllship_Click(object sender, EventArgs e)
         {
             
+            if (ClosedButton.Checked == true)
+            {
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 1");
+            }
 
-                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
+            if (InProgressButton.Checked == true)
+            {
+
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 0");
+            }
+
+            if (ALLButton3.Checked == true)
+            {
+                watchlist_MasterBindingSource1.RemoveFilter(); 
+            }
 
 
 
@@ -267,35 +284,32 @@ namespace TechnicalWatchlist
             SaveAllData();
         }
 
-        private void SaveAllData()
+        public void SaveAllData()
         {
             Usernamecheck();
-
-
 
             try
             {
                 //remark
-                watchlist_MasterDataGridView.CurrentCell = watchlist_MasterDataGridView[10, watchlist_MasterDataGridView.CurrentCell.RowIndex];
+                watchlist_MasterDataGridView.CurrentCell = watchlist_MasterDataGridView[11, watchlist_MasterDataGridView.CurrentCell.RowIndex];
                 watchlist_MasterDataGridView.CurrentCell.Value = txtboxUsername.Text + " " + timenow.Text;
+
                 this.Validate();
                 this.watchlist_MasterBindingSource1.EndEdit();
                 this.watchlist_MasterTableAdapter.Update(this.aZUREDBDataSet1.Watchlist_Master);
 
                 this.Validate();
                 this.watchlist_FileBindingSource2.EndEdit();
-                this.watchlist_dwgBindingSource2TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_File);
-
-              
-
-
+                this.watchlist_dwgBindingSource2TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_File);         
 
                 MessageBox.Show("Update successful");
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show("Update failed");
+                return;
             }
+
         }
 
         public void Filltable()
@@ -332,20 +346,13 @@ namespace TechnicalWatchlist
                 foreach (string fn in ofd.FileNames)
                 {
 
-
                     var fileStream = System.IO.File.OpenRead(fn);
                     var filenamefn = System.IO.Path.GetFileName(fn);
 
                     string datestring =  DateTime.Now.ToString("yyyyMMddHHmmss");
-                    string filenameblob = string.Format(datestring+ filenamefn);
-                  //  MessageBox.Show(filenameblob);
-                    
+                    string filenameblob = string.Format(datestring + filenamefn); 
                     watchlist_FileBindingSource2.AddNew();
-
-                      filenameTextBox1.Text = filenameblob;
-                    
-
-                
+                    filenameTextBox1.Text = filenameblob;
                     CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenameblob);
                     blockBlob_upload.UploadFromStream(fileStream);
 
@@ -368,18 +375,13 @@ namespace TechnicalWatchlist
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.accesskey);
             CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
-
-
-
             OpenFileDialog ofd = new OpenFileDialog();
 
             //複数のファイルを選択できるようにするXX
             ofd.Multiselect = false;
 
-
             try
             {
-
 
                 //ダイアログを表示する
                 if (ofd.ShowDialog() == DialogResult.OK)
@@ -387,20 +389,13 @@ namespace TechnicalWatchlist
                     //OKボタンがクリックされたとき、選択されたファイル名をすべて表示する
                     foreach (string fn in ofd.FileNames)
                     {
-
-
                         var fileStream = System.IO.File.OpenRead(fn);
                         var filenamefn = System.IO.Path.GetFileName(fn);
 
                         string datestring = DateTime.Now.ToString("yyyyMMddHHmmss");
                         string filenameblob = string.Format(datestring + filenamefn);
-                        //  MessageBox.Show(filenameblob);
-
                         watchlist_dwgBindingSource2.AddNew();
-
                         FileNameTextBox2.Text = filenameblob;
-
-
 
                         CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenameblob);
                         blockBlob_upload.UploadFromStream(fileStream);
@@ -426,6 +421,136 @@ namespace TechnicalWatchlist
             {
 
             }
+        }
+
+        private void UploadWithFileDialog3_Click(object sender, EventArgs e)
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.accesskey);
+            CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            //複数のファイルを選択できるようにするXX
+            ofd.Multiselect = false;
+
+            //ダイアログを表示する
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                //OKボタンがクリックされたとき、選択されたファイル名をすべて表示する
+                foreach (string fn in ofd.FileNames)
+                {
+
+                    var fileStream = System.IO.File.OpenRead(fn);
+                    var filenamefn = System.IO.Path.GetFileName(fn);
+
+                    string datestring = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    string filenameblob = string.Format(datestring + filenamefn);
+                    watchlist_F103BindingSource.AddNew();
+                    reportfilenameTextBox.Text = filenameblob;
+
+                    CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenameblob);
+                    blockBlob_upload.UploadFromStream(fileStream);
+
+                    // save 
+                    this.Validate();
+                    this.watchlist_F103BindingSource.EndEdit();
+                    this.watchlist_F103TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_F103);
+
+                }
+            }
+
+            else
+            {
+
+            }
+        }
+
+        private void Watchlist_F103ListBox_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.accesskey);
+
+                CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+
+                CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
+
+                //Get a reference to a blob within the container.
+
+
+                // MessageBox.Show(watchlist_FileListBox.SelectedValue.ToString());
+
+                CloudBlockBlob blob = container.GetBlockBlobReference(watchlist_F103ListBox.SelectedValue.ToString());
+
+                SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy();
+                sasConstraints.SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5);
+                sasConstraints.SharedAccessExpiryTime = DateTimeOffset.UtcNow.AddHours(24);
+                sasConstraints.Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.Write;
+
+                //Generate the shared access signature on the blob, setting the constraints directly on the signature.
+                string sasBlobToken = blob.GetSharedAccessSignature(sasConstraints);
+
+                //  MessageBox.Show(blob.Uri.ToString());
+
+
+                Process.Start(blob.Uri + sasBlobToken);
+            }
+
+            catch
+            {
+
+                MessageBox.Show("Select file");
+
+            }
+        }
+
+        private void Watchlist_F103ListBox_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] fileName = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+
+            if (fileName.Length <= 0)
+            {
+                return;
+            }
+
+            string filenamefn = System.IO.Path.GetFileName(fileName[0]);
+
+
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.accesskey);
+            CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
+
+
+            string datestring = DateTime.Now.ToString("yyyyMMddHHmmss");
+
+            string filenameblob = string.Format(datestring + filenamefn);
+
+            var fileStream = System.IO.File.OpenRead(fileName[0]);
+
+            watchlist_F103BindingSource.AddNew();
+
+            reportfilenameTextBox.Text = filenameblob;
+
+
+
+            CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenameblob);
+            blockBlob_upload.UploadFromStream(fileStream);
+
+            // save 
+            this.Validate();
+            this.watchlist_F103BindingSource.EndEdit();
+            this.watchlist_F103TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_F103);
+        }
+
+        private void Watchlist_F103ListBox_DragEnter(object sender, DragEventArgs e)
+        {
+            //コントロール内にドラッグされたとき実行される
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                //ドラッグされたデータ形式を調べ、ファイルのときはコピーとする
+                e.Effect = DragDropEffects.All;
+            else
+                //ファイル以外は受け付けない
+                e.Effect = DragDropEffects.None;
         }
 
         private void Delete_Click_1(object sender, EventArgs e)
@@ -521,11 +646,90 @@ namespace TechnicalWatchlist
             }
         }
 
+        private void Delete3_Click(object sender, EventArgs e)
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.accesskey);
+
+            CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+
+            CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
+
+
+            CloudBlockBlob blockBlob_delete = container.GetBlockBlobReference(watchlist_F103ListBox.SelectedValue.ToString());
+
+            int sel = watchlist_F103ListBox.SelectedIndex;
+
+            MessageBox.Show(watchlist_F103ListBox.SelectedValue.ToString());
+
+            DialogResult result = MessageBox.Show("Are you sure ? " + '\n' + "Delete " + watchlist_F103ListBox.SelectedValue.ToString(), "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            //何が選択されたか調べる
+
+            try
+            {
+
+                if (result == DialogResult.Yes)
+                {
+                    blockBlob_delete.Delete();
+
+                    watchlist_F103BindingSource.RemoveCurrent();
+
+                    this.Validate();
+                    this.watchlist_F103BindingSource.EndEdit();
+                    this.watchlist_F103TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_F103);
+
+                }
+
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Error");
+
+                }
+
+            }
+            catch (StorageException)
+            {
+                MessageBox.Show("Please select item.");
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Please select item.");
+            }
+
+
+        }
+
         private void ComboBoxShipname_SelectionChangeCommitted(object sender, EventArgs e)
         {
            
-            //重要ANDで書かないとシップネームとDateclosedでフィルターかけることができない
-            watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'" +  "AND Shipname like '{0:s}'", comboBoxShipname.Text);
+            if (InProgressButton.Checked == true)
+            {
+                //重要ANDで書かないとシップネームとDateclosedでフィルターかけることができない
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 0" +  "AND Shipname like '{0:s}'", comboBoxShipname.Text);
+
+            }
+            else if(InProgressButton.Checked == false)
+            {
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
+            }
+
+
+            if (ClosedButton.Checked == true)
+            {
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 1" + "AND Shipname like '{0:s}'", comboBoxShipname.Text);
+
+            }
+            else if (ClosedButton.Checked == false)
+            {
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
+
+
+            }
+
+
+            if (ALLButton3.Checked==true)
+            {
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
+            }
 
 
             Properties.Settings.Default.ComboShip = comboBoxShipname.SelectedIndex;
@@ -546,36 +750,31 @@ namespace TechnicalWatchlist
 
         }
 
-        private void FileNameTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddNewItemToTheList_Click(object sender, EventArgs e)
         {
             NewItem frm2 = new NewItem();
 
-
+            frm2.names = txtboxUsername.Text;
+            frm2.namelen = frm2namelen;
             frm2.shipname = comboBoxShipname.Text;
             frm2.ShowDialog();
             Filltable();
 
         }
 
-        private void DateVisible_CheckedChanged(object sender, EventArgs e)
+        private void ComboBoxShipname_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-               
-                watchlist_MasterBindingSource1.Filter = string.Format("DateClosed > '2000/01/01'");
-
-
-                watchlist_MasterBindingSource1.RemoveFilter();
-     
         }
 
-        private void comboBoxShipname_SelectedIndexChanged(object sender, EventArgs e)
+        private void BindingNavigatorPositionItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MenuItem2_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

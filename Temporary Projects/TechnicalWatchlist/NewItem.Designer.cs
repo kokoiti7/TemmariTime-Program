@@ -51,6 +51,10 @@
             this.shipNameComboBox = new System.Windows.Forms.ComboBox();
             this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Cancel = new System.Windows.Forms.Button();
+            this.bitspareCheckBox = new System.Windows.Forms.CheckBox();
+            this.bitspareTextBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.remarkTextBox = new System.Windows.Forms.TextBox();
             priolityLabel = new System.Windows.Forms.Label();
             kindLabel = new System.Windows.Forms.Label();
             machineryLabel = new System.Windows.Forms.Label();
@@ -65,7 +69,7 @@
             // priolityLabel
             // 
             priolityLabel.AutoSize = true;
-            priolityLabel.Location = new System.Drawing.Point(15, 76);
+            priolityLabel.Location = new System.Drawing.Point(12, 103);
             priolityLabel.Name = "priolityLabel";
             priolityLabel.Size = new System.Drawing.Size(56, 17);
             priolityLabel.TabIndex = 3;
@@ -74,7 +78,7 @@
             // kindLabel
             // 
             kindLabel.AutoSize = true;
-            kindLabel.Location = new System.Drawing.Point(15, 109);
+            kindLabel.Location = new System.Drawing.Point(12, 136);
             kindLabel.Name = "kindLabel";
             kindLabel.Size = new System.Drawing.Size(42, 17);
             kindLabel.TabIndex = 9;
@@ -83,7 +87,7 @@
             // machineryLabel
             // 
             machineryLabel.AutoSize = true;
-            machineryLabel.Location = new System.Drawing.Point(15, 145);
+            machineryLabel.Location = new System.Drawing.Point(12, 172);
             machineryLabel.Name = "machineryLabel";
             machineryLabel.Size = new System.Drawing.Size(79, 17);
             machineryLabel.TabIndex = 11;
@@ -92,7 +96,7 @@
             // subjectLabel
             // 
             subjectLabel.AutoSize = true;
-            subjectLabel.Location = new System.Drawing.Point(15, 183);
+            subjectLabel.Location = new System.Drawing.Point(12, 210);
             subjectLabel.Name = "subjectLabel";
             subjectLabel.Size = new System.Drawing.Size(62, 17);
             subjectLabel.TabIndex = 13;
@@ -101,7 +105,7 @@
             // dateComLabel
             // 
             dateComLabel.AutoSize = true;
-            dateComLabel.Location = new System.Drawing.Point(15, 219);
+            dateComLabel.Location = new System.Drawing.Point(12, 246);
             dateComLabel.Name = "dateComLabel";
             dateComLabel.Size = new System.Drawing.Size(78, 17);
             dateComLabel.TabIndex = 15;
@@ -110,7 +114,7 @@
             // shipNameLabel1
             // 
             shipNameLabel1.AutoSize = true;
-            shipNameLabel1.Location = new System.Drawing.Point(15, 41);
+            shipNameLabel1.Location = new System.Drawing.Point(12, 68);
             shipNameLabel1.Name = "shipNameLabel1";
             shipNameLabel1.Size = new System.Drawing.Size(83, 17);
             shipNameLabel1.TabIndex = 18;
@@ -136,6 +140,7 @@
             this.tableAdapterManager.Ship_Master_TBTableAdapter = this.ship_Master_TBTableAdapter;
             this.tableAdapterManager.UpdateOrder = TechnicalWatchlist.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Watchlist_dwgTableAdapter = null;
+            this.tableAdapterManager.Watchlist_F103TableAdapter = null;
             this.tableAdapterManager.Watchlist_FileTableAdapter = null;
             this.tableAdapterManager.Watchlist_MasterTableAdapter = this.watchlist_MasterTableAdapter;
             // 
@@ -146,11 +151,13 @@
             // listIDTextBox
             // 
             this.listIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_MasterBindingSource, "ListID", true));
-            this.listIDTextBox.Location = new System.Drawing.Point(244, 272);
+            this.listIDTextBox.Location = new System.Drawing.Point(239, 33);
             this.listIDTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listIDTextBox.Name = "listIDTextBox";
+            this.listIDTextBox.ReadOnly = true;
             this.listIDTextBox.Size = new System.Drawing.Size(43, 24);
             this.listIDTextBox.TabIndex = 2;
+            this.listIDTextBox.TabStop = false;
             // 
             // priolityComboBox
             // 
@@ -161,20 +168,22 @@
             "High",
             "Normal",
             "Low"});
-            this.priolityComboBox.Location = new System.Drawing.Point(117, 71);
+            this.priolityComboBox.Location = new System.Drawing.Point(114, 98);
             this.priolityComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.priolityComboBox.Name = "priolityComboBox";
-            this.priolityComboBox.Size = new System.Drawing.Size(165, 25);
+            this.priolityComboBox.Size = new System.Drawing.Size(170, 25);
             this.priolityComboBox.TabIndex = 2;
             // 
             // shipIDTextBox
             // 
             this.shipIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_MasterBindingSource, "ShipID", true));
-            this.shipIDTextBox.Location = new System.Drawing.Point(197, 271);
+            this.shipIDTextBox.Location = new System.Drawing.Point(114, 33);
             this.shipIDTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.shipIDTextBox.Name = "shipIDTextBox";
+            this.shipIDTextBox.ReadOnly = true;
             this.shipIDTextBox.Size = new System.Drawing.Size(87, 24);
             this.shipIDTextBox.TabIndex = 6;
+            this.shipIDTextBox.TabStop = false;
             // 
             // kindComboBox
             // 
@@ -184,10 +193,10 @@
             "F103-5",
             "OtherTrouble",
             "Inspection"});
-            this.kindComboBox.Location = new System.Drawing.Point(117, 104);
+            this.kindComboBox.Location = new System.Drawing.Point(114, 131);
             this.kindComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kindComboBox.Name = "kindComboBox";
-            this.kindComboBox.Size = new System.Drawing.Size(165, 25);
+            this.kindComboBox.Size = new System.Drawing.Size(170, 25);
             this.kindComboBox.TabIndex = 10;
             // 
             // machineryComboBox
@@ -203,19 +212,19 @@
             "Piping System",
             "Instrument",
             "Navigation Equipment"});
-            this.machineryComboBox.Location = new System.Drawing.Point(117, 141);
+            this.machineryComboBox.Location = new System.Drawing.Point(114, 168);
             this.machineryComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.machineryComboBox.Name = "machineryComboBox";
-            this.machineryComboBox.Size = new System.Drawing.Size(266, 25);
+            this.machineryComboBox.Size = new System.Drawing.Size(170, 25);
             this.machineryComboBox.TabIndex = 12;
             // 
             // subjectTextBox
             // 
             this.subjectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_MasterBindingSource, "Subject", true));
-            this.subjectTextBox.Location = new System.Drawing.Point(117, 178);
+            this.subjectTextBox.Location = new System.Drawing.Point(114, 205);
             this.subjectTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.subjectTextBox.Name = "subjectTextBox";
-            this.subjectTextBox.Size = new System.Drawing.Size(266, 24);
+            this.subjectTextBox.Size = new System.Drawing.Size(170, 24);
             this.subjectTextBox.TabIndex = 14;
             // 
             // dateComDateTimePicker
@@ -223,15 +232,15 @@
             this.dateComDateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.dateComDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.watchlist_MasterBindingSource, "DateCom", true));
             this.dateComDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateComDateTimePicker.Location = new System.Drawing.Point(117, 213);
+            this.dateComDateTimePicker.Location = new System.Drawing.Point(114, 240);
             this.dateComDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateComDateTimePicker.Name = "dateComDateTimePicker";
-            this.dateComDateTimePicker.Size = new System.Drawing.Size(165, 24);
+            this.dateComDateTimePicker.Size = new System.Drawing.Size(170, 24);
             this.dateComDateTimePicker.TabIndex = 16;
             // 
             // SaveAndClose
             // 
-            this.SaveAndClose.Location = new System.Drawing.Point(119, 271);
+            this.SaveAndClose.Location = new System.Drawing.Point(114, 281);
             this.SaveAndClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SaveAndClose.Name = "SaveAndClose";
             this.SaveAndClose.Size = new System.Drawing.Size(168, 34);
@@ -246,13 +255,12 @@
             this.shipNameComboBox.DataSource = this.shipMasterTBBindingSource;
             this.shipNameComboBox.DisplayMember = "PresentName";
             this.shipNameComboBox.FormattingEnabled = true;
-            this.shipNameComboBox.Location = new System.Drawing.Point(117, 38);
+            this.shipNameComboBox.Location = new System.Drawing.Point(114, 65);
             this.shipNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.shipNameComboBox.Name = "shipNameComboBox";
-            this.shipNameComboBox.Size = new System.Drawing.Size(266, 25);
+            this.shipNameComboBox.Size = new System.Drawing.Size(170, 25);
             this.shipNameComboBox.TabIndex = 1;
             this.shipNameComboBox.ValueMember = "ID";
-            this.shipNameComboBox.SelectedIndexChanged += new System.EventHandler(this.ShipNameComboBox_SelectedIndexChanged);
             this.shipNameComboBox.SelectionChangeCommitted += new System.EventHandler(this.ShipNameComboBox_SelectionChangeCommitted);
             // 
             // shipMasterTBBindingSource
@@ -262,7 +270,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(119, 313);
+            this.Cancel.Location = new System.Drawing.Point(116, 330);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(168, 34);
@@ -271,15 +279,53 @@
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
+            // bitspareCheckBox
+            // 
+            this.bitspareCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.watchlist_MasterBindingSource, "Bitspare", true));
+            this.bitspareCheckBox.Location = new System.Drawing.Point(135, 330);
+            this.bitspareCheckBox.Name = "bitspareCheckBox";
+            this.bitspareCheckBox.Size = new System.Drawing.Size(22, 24);
+            this.bitspareCheckBox.TabIndex = 21;
+            this.bitspareCheckBox.TabStop = false;
+            this.bitspareCheckBox.Text = "checkBox1";
+            this.bitspareCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // bitspareTextBox
+            // 
+            this.bitspareTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_MasterBindingSource, "Bitspare", true));
+            this.bitspareTextBox.Location = new System.Drawing.Point(244, 336);
+            this.bitspareTextBox.Name = "bitspareTextBox";
+            this.bitspareTextBox.Size = new System.Drawing.Size(30, 24);
+            this.bitspareTextBox.TabIndex = 23;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(114, 281);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(26, 24);
+            this.textBox1.TabIndex = 24;
+            // 
+            // remarkTextBox
+            // 
+            this.remarkTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_MasterBindingSource, "Remark", true));
+            this.remarkTextBox.Location = new System.Drawing.Point(174, 291);
+            this.remarkTextBox.Name = "remarkTextBox";
+            this.remarkTextBox.Size = new System.Drawing.Size(100, 24);
+            this.remarkTextBox.TabIndex = 25;
+            // 
             // NewItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 381);
+            this.ClientSize = new System.Drawing.Size(365, 403);
+            this.Controls.Add(this.SaveAndClose);
+            this.Controls.Add(this.remarkTextBox);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.bitspareTextBox);
+            this.Controls.Add(this.bitspareCheckBox);
             this.Controls.Add(shipNameLabel1);
             this.Controls.Add(this.shipNameComboBox);
-            this.Controls.Add(this.SaveAndClose);
             this.Controls.Add(this.listIDTextBox);
             this.Controls.Add(priolityLabel);
             this.Controls.Add(this.priolityComboBox);
@@ -323,5 +369,9 @@
         private System.Windows.Forms.ComboBox shipNameComboBox;
         private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
         private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.CheckBox bitspareCheckBox;
+        private System.Windows.Forms.TextBox bitspareTextBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox remarkTextBox;
     }
 }
