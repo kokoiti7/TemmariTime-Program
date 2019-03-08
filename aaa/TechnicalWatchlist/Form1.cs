@@ -17,7 +17,8 @@ namespace TechnicalWatchlist
 {
     public partial class Form1 : Form
     {
-        
+
+        string frm2name;
         int frm2namelen =0;
         public Form1()
         {
@@ -34,15 +35,6 @@ namespace TechnicalWatchlist
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            // TODO: このコード行はデータを 'aZUREDBDataSet1.Watchlist_F103' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.watchlist_F103TableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_F103);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Watchlist_File' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.watchlist_dwgBindingSource2TableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_File);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Watchlist_dwg' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.watchlist_dwgTableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_dwg);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Watchlist_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.watchlist_MasterTableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_Master);
 
             this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet1.Ship_Master_TB);
 
@@ -463,22 +455,16 @@ namespace TechnicalWatchlist
 
                 CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
 
-                //Get a reference to a blob within the container.
 
-
-                // MessageBox.Show(watchlist_FileListBox.SelectedValue.ToString());
-
-                CloudBlockBlob blob = container.GetBlockBlobReference(reportfilenameListBox.SelectedValue.ToString());
+                CloudBlockBlob blob = container.GetBlockBlobReference(watchlist_F103ListBox.SelectedValue.ToString());
 
                 SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy();
                 sasConstraints.SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5);
                 sasConstraints.SharedAccessExpiryTime = DateTimeOffset.UtcNow.AddHours(24);
                 sasConstraints.Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.Write;
 
-                //Generate the shared access signature on the blob, setting the constraints directly on the signature.
                 string sasBlobToken = blob.GetSharedAccessSignature(sasConstraints);
 
-                //  MessageBox.Show(blob.Uri.ToString());
 
 
                 Process.Start(blob.Uri + sasBlobToken);
@@ -643,12 +629,13 @@ namespace TechnicalWatchlist
             CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
 
 
-            CloudBlockBlob blockBlob_delete = container.GetBlockBlobReference(reportfilenameListBox.SelectedValue.ToString());
+            CloudBlockBlob blockBlob_delete = container.GetBlockBlobReference(watchlist_F103ListBox.SelectedValue.ToString());
 
-            int sel = reportfilenameListBox.SelectedIndex;
+            int sel = watchlist_F103ListBox.SelectedIndex;
 
+            MessageBox.Show(watchlist_F103ListBox.SelectedValue.ToString());
 
-            DialogResult result = MessageBox.Show("Are you sure ? " + '\n' + "Delete " + reportfilenameListBox.SelectedValue.ToString(), "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult result = MessageBox.Show("Are you sure ? " + '\n' + "Delete " + watchlist_F103ListBox.SelectedValue.ToString(), "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             //何が選択されたか調べる
 
             try
@@ -691,18 +678,20 @@ namespace TechnicalWatchlist
             if (InProgressButton.Checked == true)
             {
                 //重要ANDで書かないとシップネームとDateclosedでフィルターかけることができない
-                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 0" + "AND ShipID = {000000}", comboBoxShipname.SelectedValue);
+               // MessageBox.Show(comboBoxShipname.SelectedValue.ToString());
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 1" + "AND ShipID = {000000}", comboBoxShipname.SelectedValue);
+               
 
             }
             else if(InProgressButton.Checked == false)
             {
-                watchlist_MasterBindingSource1.Filter = string.Format("ShipID = {000000}", comboBoxShipname.SelectedValue);
+                watchlist_MasterBindingSource1.Filter = string.Format("ShipID = {000000} ", comboBoxShipname.SelectedValue);
             }
 
 
             if (ClosedButton.Checked == true)
             {
-                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 1" + "AND ShipID = {000000}", comboBoxShipname.SelectedValue);
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 0" + "AND ShipID = {000000}", comboBoxShipname.SelectedValue);
 
             }
             else if (ClosedButton.Checked == false)
@@ -763,5 +752,9 @@ namespace TechnicalWatchlist
         {
            
         }
+
+
+
+
     }
 }

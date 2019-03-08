@@ -36,6 +36,8 @@ namespace TechnicalWatchlist {
         
         private global::System.Data.DataRelation relationFK_Watchlist_dwg_Watchlist_Master;
         
+        private global::System.Data.DataRelation relationFK_Watchlist_F103_Watchlist_Master;
+        
         private global::System.Data.DataRelation relationFK_Watchlist_File_Watchlist_Master;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -295,6 +297,7 @@ namespace TechnicalWatchlist {
                 }
             }
             this.relationFK_Watchlist_dwg_Watchlist_Master = this.Relations["FK_Watchlist_dwg_Watchlist_Master"];
+            this.relationFK_Watchlist_F103_Watchlist_Master = this.Relations["FK_Watchlist_F103_Watchlist_Master"];
             this.relationFK_Watchlist_File_Watchlist_Master = this.Relations["FK_Watchlist_File_Watchlist_Master"];
         }
         
@@ -320,6 +323,10 @@ namespace TechnicalWatchlist {
                         this.tableWatchlist_Master.ListIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableWatchlist_dwg.ListIDColumn}, false);
             this.Relations.Add(this.relationFK_Watchlist_dwg_Watchlist_Master);
+            this.relationFK_Watchlist_F103_Watchlist_Master = new global::System.Data.DataRelation("FK_Watchlist_F103_Watchlist_Master", new global::System.Data.DataColumn[] {
+                        this.tableWatchlist_Master.ListIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableWatchlist_F103.ListIDColumn}, false);
+            this.Relations.Add(this.relationFK_Watchlist_F103_Watchlist_Master);
             this.relationFK_Watchlist_File_Watchlist_Master = new global::System.Data.DataRelation("FK_Watchlist_File_Watchlist_Master", new global::System.Data.DataColumn[] {
                         this.tableWatchlist_Master.ListIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableWatchlist_File.ListIDColumn}, false);
@@ -1749,11 +1756,11 @@ namespace TechnicalWatchlist {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Watchlist_F103Row AddWatchlist_F103Row(int ListID, int ShipID, string reportNo, string reportfilename, string reportpath, string remark, System.DateTime reportdate, System.DateTime datespare, bool bitspare, string Nverspare) {
+            public Watchlist_F103Row AddWatchlist_F103Row(Watchlist_MasterRow parentWatchlist_MasterRowByFK_Watchlist_F103_Watchlist_Master, int ShipID, string reportNo, string reportfilename, string reportpath, string remark, System.DateTime reportdate, System.DateTime datespare, bool bitspare, string Nverspare) {
                 Watchlist_F103Row rowWatchlist_F103Row = ((Watchlist_F103Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        ListID,
+                        null,
                         ShipID,
                         reportNo,
                         reportfilename,
@@ -1763,6 +1770,9 @@ namespace TechnicalWatchlist {
                         datespare,
                         bitspare,
                         Nverspare};
+                if ((parentWatchlist_MasterRowByFK_Watchlist_F103_Watchlist_Master != null)) {
+                    columnValuesArray[1] = parentWatchlist_MasterRowByFK_Watchlist_F103_Watchlist_Master[0];
+                }
                 rowWatchlist_F103Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWatchlist_F103Row);
                 return rowWatchlist_F103Row;
@@ -4159,6 +4169,17 @@ namespace TechnicalWatchlist {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Watchlist_MasterRow Watchlist_MasterRow {
+                get {
+                    return ((Watchlist_MasterRow)(this.GetParentRow(this.Table.ParentRelations["FK_Watchlist_F103_Watchlist_Master"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Watchlist_F103_Watchlist_Master"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsListIDNull() {
                 return this.IsNull(this.tableWatchlist_F103.ListIDColumn);
             }
@@ -4964,6 +4985,17 @@ namespace TechnicalWatchlist {
                 }
                 else {
                     return ((Watchlist_dwgRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Watchlist_dwg_Watchlist_Master"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Watchlist_F103Row[] GetWatchlist_F103Rows() {
+                if ((this.Table.ChildRelations["FK_Watchlist_F103_Watchlist_Master"] == null)) {
+                    return new Watchlist_F103Row[0];
+                }
+                else {
+                    return ((Watchlist_F103Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Watchlist_F103_Watchlist_Master"])));
                 }
             }
             

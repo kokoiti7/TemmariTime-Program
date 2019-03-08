@@ -31,20 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label remark2Label;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBoxShipname = new System.Windows.Forms.ComboBox();
             this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet1 = new TechnicalWatchlist.AZUREDBDataSet();
             this.buttonShowAllship = new System.Windows.Forms.Button();
             this.ship_Master_TBTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.tableAdapterManager = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.TableAdapterManager();
-            this.watchlist_dwgTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_dwgTableAdapter();
-            this.watchlist_F103TableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_F103TableAdapter();
-            this.watchlist_dwgBindingSource2TableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter();
-            this.watchlist_MasterTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_MasterTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.watchlist_MasterBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -66,22 +62,25 @@
             this.txtboxUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.watchlist_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.watchlist_MasterTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_MasterTableAdapter();
             this.watchlist_dwgBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.watchlist_dwgTableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_dwgTableAdapter();
             this.watchlist_FileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.watchlist_dwgBindingSource2TableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter();
             this.watchlist_FileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_dwgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_dwgBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_FileBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_FileListBox = new System.Windows.Forms.ListBox();
-            this.watchlist_F103BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.reportfilenameListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.reportfilenameTextBox = new System.Windows.Forms.TextBox();
+            this.watchlist_F103BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Delete3 = new System.Windows.Forms.Button();
             this.UploadWithFileDialog3 = new System.Windows.Forms.Button();
+            this.watchlist_F103ListBox = new System.Windows.Forms.ListBox();
             this.FileNameTextBox2 = new System.Windows.Forms.TextBox();
             this.UploadWithFiledialog2 = new System.Windows.Forms.Button();
             this.filenameTextBox1 = new System.Windows.Forms.TextBox();
@@ -92,6 +91,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.watchlist_dwgListBox = new System.Windows.Forms.ListBox();
+            this.watchlist_F103TableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_F103TableAdapter();
             this.watchlist_MasterDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -123,8 +123,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_MasterDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,26 +187,10 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Ship_Master_TBTableAdapter = this.ship_Master_TBTableAdapter;
             this.tableAdapterManager.UpdateOrder = TechnicalWatchlist.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Watchlist_dwgTableAdapter = this.watchlist_dwgTableAdapter;
-            this.tableAdapterManager.Watchlist_F103TableAdapter = this.watchlist_F103TableAdapter;
-            this.tableAdapterManager.Watchlist_FileTableAdapter = this.watchlist_dwgBindingSource2TableAdapter;
-            this.tableAdapterManager.Watchlist_MasterTableAdapter = this.watchlist_MasterTableAdapter;
-            // 
-            // watchlist_dwgTableAdapter
-            // 
-            this.watchlist_dwgTableAdapter.ClearBeforeFill = true;
-            // 
-            // watchlist_F103TableAdapter
-            // 
-            this.watchlist_F103TableAdapter.ClearBeforeFill = true;
-            // 
-            // watchlist_dwgBindingSource2TableAdapter
-            // 
-            this.watchlist_dwgBindingSource2TableAdapter.ClearBeforeFill = true;
-            // 
-            // watchlist_MasterTableAdapter
-            // 
-            this.watchlist_MasterTableAdapter.ClearBeforeFill = true;
+            this.tableAdapterManager.Watchlist_dwgTableAdapter = null;
+            this.tableAdapterManager.Watchlist_F103TableAdapter = null;
+            this.tableAdapterManager.Watchlist_FileTableAdapter = null;
+            this.tableAdapterManager.Watchlist_MasterTableAdapter = null;
             // 
             // panel1
             // 
@@ -224,7 +208,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1399, 101);
+            this.panel1.Size = new System.Drawing.Size(1284, 101);
             this.panel1.TabIndex = 3;
             // 
             // bindingNavigator1
@@ -429,15 +413,27 @@
             this.watchlist_MasterBindingSource.DataMember = "Watchlist_Master";
             this.watchlist_MasterBindingSource.DataSource = this.aZUREDBDataSet1;
             // 
+            // watchlist_MasterTableAdapter
+            // 
+            this.watchlist_MasterTableAdapter.ClearBeforeFill = true;
+            // 
             // watchlist_dwgBindingSource
             // 
             this.watchlist_dwgBindingSource.DataMember = "FK_Watchlist_dwg_Watchlist_Master";
             this.watchlist_dwgBindingSource.DataSource = this.watchlist_MasterBindingSource;
             // 
+            // watchlist_dwgTableAdapter
+            // 
+            this.watchlist_dwgTableAdapter.ClearBeforeFill = true;
+            // 
             // watchlist_FileBindingSource
             // 
             this.watchlist_FileBindingSource.DataMember = "FK_Watchlist_File_Watchlist_Master";
             this.watchlist_FileBindingSource.DataSource = this.watchlist_MasterBindingSource;
+            // 
+            // watchlist_dwgBindingSource2TableAdapter
+            // 
+            this.watchlist_dwgBindingSource2TableAdapter.ClearBeforeFill = true;
             // 
             // watchlist_FileBindingSource1
             // 
@@ -462,7 +458,6 @@
             // watchlist_FileListBox
             // 
             this.watchlist_FileListBox.AllowDrop = true;
-            this.watchlist_FileListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.watchlist_F103BindingSource, "reportfilename", true));
             this.watchlist_FileListBox.DataSource = this.watchlist_FileBindingSource2;
             this.watchlist_FileListBox.DisplayMember = "Filename";
             this.watchlist_FileListBox.FormattingEnabled = true;
@@ -476,11 +471,6 @@
             this.watchlist_FileListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.Watchlist_FileListBox_DragEnter);
             this.watchlist_FileListBox.DoubleClick += new System.EventHandler(this.Watchlist_FileListBox_DoubleClick);
             // 
-            // watchlist_F103BindingSource
-            // 
-            this.watchlist_F103BindingSource.DataSource = this.aZUREDBDataSet1;
-            this.watchlist_F103BindingSource.Position = 0;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -489,12 +479,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.reportfilenameListBox);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.reportfilenameTextBox);
             this.panel2.Controls.Add(this.Delete3);
             this.panel2.Controls.Add(this.UploadWithFileDialog3);
+            this.panel2.Controls.Add(this.watchlist_F103ListBox);
             this.panel2.Controls.Add(this.FileNameTextBox2);
             this.panel2.Controls.Add(this.UploadWithFiledialog2);
             this.panel2.Controls.Add(this.filenameTextBox1);
@@ -508,28 +498,17 @@
             this.panel2.Controls.Add(this.watchlist_FileListBox);
             this.panel2.Controls.Add(this.watchlist_dwgListBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 712);
+            this.panel2.Location = new System.Drawing.Point(0, 417);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1399, 320);
+            this.panel2.Size = new System.Drawing.Size(1284, 303);
             this.panel2.TabIndex = 4;
-            // 
-            // reportfilenameListBox
-            // 
-            this.reportfilenameListBox.DataSource = this.watchlist_F103BindingSource;
-            this.reportfilenameListBox.DisplayMember = "reportfilename";
-            this.reportfilenameListBox.FormattingEnabled = true;
-            this.reportfilenameListBox.ItemHeight = 17;
-            this.reportfilenameListBox.Location = new System.Drawing.Point(1077, 32);
-            this.reportfilenameListBox.Name = "reportfilenameListBox";
-            this.reportfilenameListBox.Size = new System.Drawing.Size(263, 225);
-            this.reportfilenameListBox.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(1133, 12);
+            this.label1.Location = new System.Drawing.Point(1074, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 17);
             this.label1.TabIndex = 36;
@@ -540,7 +519,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(1074, 12);
+            this.label5.Location = new System.Drawing.Point(1015, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 35;
@@ -557,11 +536,16 @@
             this.reportfilenameTextBox.Size = new System.Drawing.Size(32, 17);
             this.reportfilenameTextBox.TabIndex = 34;
             // 
+            // watchlist_F103BindingSource
+            // 
+            this.watchlist_F103BindingSource.DataMember = "Watchlist_F103";
+            this.watchlist_F103BindingSource.DataSource = this.aZUREDBDataSet1;
+            // 
             // Delete3
             // 
             this.Delete3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Delete3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Delete3.Location = new System.Drawing.Point(1229, 262);
+            this.Delete3.Location = new System.Drawing.Point(1169, 263);
             this.Delete3.Name = "Delete3";
             this.Delete3.Size = new System.Drawing.Size(112, 30);
             this.Delete3.TabIndex = 32;
@@ -573,13 +557,29 @@
             // 
             this.UploadWithFileDialog3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.UploadWithFileDialog3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UploadWithFileDialog3.Location = new System.Drawing.Point(1111, 262);
+            this.UploadWithFileDialog3.Location = new System.Drawing.Point(1051, 263);
             this.UploadWithFileDialog3.Name = "UploadWithFileDialog3";
             this.UploadWithFileDialog3.Size = new System.Drawing.Size(112, 30);
             this.UploadWithFileDialog3.TabIndex = 31;
             this.UploadWithFileDialog3.Text = "Upload";
             this.UploadWithFileDialog3.UseVisualStyleBackColor = false;
             this.UploadWithFileDialog3.Click += new System.EventHandler(this.UploadWithFileDialog3_Click);
+            // 
+            // watchlist_F103ListBox
+            // 
+            this.watchlist_F103ListBox.AllowDrop = true;
+            this.watchlist_F103ListBox.DataSource = this.watchlist_F103BindingSource;
+            this.watchlist_F103ListBox.DisplayMember = "reportfilename";
+            this.watchlist_F103ListBox.FormattingEnabled = true;
+            this.watchlist_F103ListBox.ItemHeight = 17;
+            this.watchlist_F103ListBox.Location = new System.Drawing.Point(1018, 32);
+            this.watchlist_F103ListBox.Name = "watchlist_F103ListBox";
+            this.watchlist_F103ListBox.Size = new System.Drawing.Size(263, 225);
+            this.watchlist_F103ListBox.TabIndex = 30;
+            this.watchlist_F103ListBox.ValueMember = "reportfilename";
+            this.watchlist_F103ListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.Watchlist_F103ListBox_DragDrop);
+            this.watchlist_F103ListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.Watchlist_F103ListBox_DragEnter);
+            this.watchlist_F103ListBox.DoubleClick += new System.EventHandler(this.Watchlist_F103ListBox_DoubleClick);
             // 
             // FileNameTextBox2
             // 
@@ -699,23 +699,27 @@
             this.watchlist_dwgListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.Watchlist_dwgListBox_DragEnter);
             this.watchlist_dwgListBox.DoubleClick += new System.EventHandler(this.Watchlist_dwgListBox_DoubleClick);
             // 
+            // watchlist_F103TableAdapter
+            // 
+            this.watchlist_F103TableAdapter.ClearBeforeFill = true;
+            // 
             // watchlist_MasterDataGridView
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            this.watchlist_MasterDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            this.watchlist_MasterDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.watchlist_MasterDataGridView.AutoGenerateColumns = false;
             this.watchlist_MasterDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.watchlist_MasterDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.watchlist_MasterDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.watchlist_MasterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.watchlist_MasterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -738,23 +742,23 @@
             this.watchlist_MasterDataGridView.Location = new System.Drawing.Point(0, 101);
             this.watchlist_MasterDataGridView.Name = "watchlist_MasterDataGridView";
             this.watchlist_MasterDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.watchlist_MasterDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.watchlist_MasterDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.watchlist_MasterDataGridView.RowHeadersWidth = 80;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.watchlist_MasterDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.watchlist_MasterDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.watchlist_MasterDataGridView.RowTemplate.Height = 21;
-            this.watchlist_MasterDataGridView.Size = new System.Drawing.Size(1399, 611);
+            this.watchlist_MasterDataGridView.Size = new System.Drawing.Size(1284, 316);
             this.watchlist_MasterDataGridView.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn1
@@ -875,7 +879,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(1399, 1032);
+            this.ClientSize = new System.Drawing.Size(1284, 720);
             this.Controls.Add(this.watchlist_MasterDataGridView);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -902,9 +906,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_MasterDataGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -947,6 +951,7 @@
         private System.Windows.Forms.RadioButton ALLButton3;
         private System.Windows.Forms.BindingSource watchlist_F103BindingSource;
         private AZUREDBDataSetTableAdapters.Watchlist_F103TableAdapter watchlist_F103TableAdapter;
+        private System.Windows.Forms.ListBox watchlist_F103ListBox;
         private System.Windows.Forms.TextBox reportfilenameTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Delete3;
@@ -983,7 +988,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.ListBox reportfilenameListBox;
     }
 }
 

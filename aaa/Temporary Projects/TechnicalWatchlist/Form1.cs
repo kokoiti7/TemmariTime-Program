@@ -468,7 +468,7 @@ namespace TechnicalWatchlist
 
                 // MessageBox.Show(watchlist_FileListBox.SelectedValue.ToString());
 
-                CloudBlockBlob blob = container.GetBlockBlobReference(reportfilenameListBox.SelectedValue.ToString());
+                CloudBlockBlob blob = container.GetBlockBlobReference(watchlist_F103ListBox.SelectedValue.ToString());
 
                 SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy();
                 sasConstraints.SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5);
@@ -643,12 +643,13 @@ namespace TechnicalWatchlist
             CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
 
 
-            CloudBlockBlob blockBlob_delete = container.GetBlockBlobReference(reportfilenameListBox.SelectedValue.ToString());
+            CloudBlockBlob blockBlob_delete = container.GetBlockBlobReference(watchlist_F103ListBox.SelectedValue.ToString());
 
-            int sel = reportfilenameListBox.SelectedIndex;
+            int sel = watchlist_F103ListBox.SelectedIndex;
 
+            MessageBox.Show(watchlist_F103ListBox.SelectedValue.ToString());
 
-            DialogResult result = MessageBox.Show("Are you sure ? " + '\n' + "Delete " + reportfilenameListBox.SelectedValue.ToString(), "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult result = MessageBox.Show("Are you sure ? " + '\n' + "Delete " + watchlist_F103ListBox.SelectedValue.ToString(), "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             //何が選択されたか調べる
 
             try
@@ -691,23 +692,23 @@ namespace TechnicalWatchlist
             if (InProgressButton.Checked == true)
             {
                 //重要ANDで書かないとシップネームとDateclosedでフィルターかけることができない
-                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 0" + "AND ShipID = {000000}", comboBoxShipname.SelectedValue);
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 0" +  "AND Shipname like '{0:s}'", comboBoxShipname.Text);
 
             }
             else if(InProgressButton.Checked == false)
             {
-                watchlist_MasterBindingSource1.Filter = string.Format("ShipID = {000000}", comboBoxShipname.SelectedValue);
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
             }
 
 
             if (ClosedButton.Checked == true)
             {
-                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 1" + "AND ShipID = {000000}", comboBoxShipname.SelectedValue);
+                watchlist_MasterBindingSource1.Filter = string.Format("Bitspare = 1" + "AND Shipname like '{0:s}'", comboBoxShipname.Text);
 
             }
             else if (ClosedButton.Checked == false)
             {
-                watchlist_MasterBindingSource1.Filter = string.Format("ShipID = {000000}", comboBoxShipname.SelectedValue);
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
 
 
             }
@@ -715,7 +716,7 @@ namespace TechnicalWatchlist
 
             if (ALLButton3.Checked==true)
             {
-                watchlist_MasterBindingSource1.Filter = string.Format("ShipID = {000000}", comboBoxShipname.SelectedValue);
+                watchlist_MasterBindingSource1.Filter = string.Format("Shipname like '{0:s}'", comboBoxShipname.Text);
             }
 
 
