@@ -68,19 +68,15 @@
             this.watchlist_FileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_dwgBindingSource2TableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter();
             this.watchlist_FileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.watchlist_dwgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_dwgBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.watchlist_FileBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.watchlist_FileListBox = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.reportfilenameTextBox = new System.Windows.Forms.TextBox();
-            this.watchlist_F103BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Delete3 = new System.Windows.Forms.Button();
             this.UploadWithFileDialog3 = new System.Windows.Forms.Button();
-            this.watchlist_F103ListBox = new System.Windows.Forms.ListBox();
             this.FileNameTextBox2 = new System.Windows.Forms.TextBox();
             this.UploadWithFiledialog2 = new System.Windows.Forms.Button();
             this.filenameTextBox1 = new System.Windows.Forms.TextBox();
@@ -93,21 +89,29 @@
             this.watchlist_dwgListBox = new System.Windows.Forms.ListBox();
             this.watchlist_F103TableAdapter = new TechnicalWatchlist.AZUREDBDataSetTableAdapters.Watchlist_F103TableAdapter();
             this.watchlist_MasterDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.watchlist_F103ListBox = new System.Windows.Forms.ListBox();
+            this.watchlist_dwgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.watchlist_FileBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aZUREDBDataSet11 = new TechnicalWatchlist.AZUREDBDataSet1();
+            this.watchlist_F103TableAdapter1 = new TechnicalWatchlist.AZUREDBDataSet1TableAdapters.Watchlist_F103TableAdapter();
+            this.watchlistF103BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.watchlist_F103BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKWatchlistF103WatchlistMasterBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             remark2Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
@@ -120,12 +124,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_MasterDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlistF103BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKWatchlistF103WatchlistMasterBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // remark2Label
@@ -440,20 +447,10 @@
             this.watchlist_FileBindingSource1.DataMember = "FK_Watchlist_File_Watchlist_Master";
             this.watchlist_FileBindingSource1.DataSource = this.watchlist_MasterBindingSource;
             // 
-            // watchlist_dwgBindingSource1
-            // 
-            this.watchlist_dwgBindingSource1.DataMember = "FK_Watchlist_dwg_Watchlist_Master";
-            this.watchlist_dwgBindingSource1.DataSource = this.watchlist_MasterBindingSource;
-            // 
             // watchlist_dwgBindingSource2
             // 
             this.watchlist_dwgBindingSource2.DataMember = "FK_Watchlist_dwg_Watchlist_Master";
             this.watchlist_dwgBindingSource2.DataSource = this.watchlist_MasterBindingSource1;
-            // 
-            // watchlist_FileBindingSource2
-            // 
-            this.watchlist_FileBindingSource2.DataMember = "FK_Watchlist_File_Watchlist_Master";
-            this.watchlist_FileBindingSource2.DataSource = this.watchlist_MasterBindingSource1;
             // 
             // watchlist_FileListBox
             // 
@@ -498,7 +495,7 @@
             this.panel2.Controls.Add(this.watchlist_FileListBox);
             this.panel2.Controls.Add(this.watchlist_dwgListBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 417);
+            this.panel2.Location = new System.Drawing.Point(0, 395);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1284, 303);
             this.panel2.TabIndex = 4;
@@ -529,17 +526,12 @@
             // 
             this.reportfilenameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.reportfilenameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportfilenameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_F103BindingSource, "reportfilename", true));
-            this.reportfilenameTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.reportfilenameTextBox.Location = new System.Drawing.Point(191, 282);
+            this.reportfilenameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKWatchlistF103WatchlistMasterBindingSource3, "reportfilename", true));
+            this.reportfilenameTextBox.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.reportfilenameTextBox.Location = new System.Drawing.Point(209, 283);
             this.reportfilenameTextBox.Name = "reportfilenameTextBox";
             this.reportfilenameTextBox.Size = new System.Drawing.Size(32, 17);
             this.reportfilenameTextBox.TabIndex = 34;
-            // 
-            // watchlist_F103BindingSource
-            // 
-            this.watchlist_F103BindingSource.DataMember = "Watchlist_F103";
-            this.watchlist_F103BindingSource.DataSource = this.aZUREDBDataSet1;
             // 
             // Delete3
             // 
@@ -564,22 +556,6 @@
             this.UploadWithFileDialog3.Text = "Upload";
             this.UploadWithFileDialog3.UseVisualStyleBackColor = false;
             this.UploadWithFileDialog3.Click += new System.EventHandler(this.UploadWithFileDialog3_Click);
-            // 
-            // watchlist_F103ListBox
-            // 
-            this.watchlist_F103ListBox.AllowDrop = true;
-            this.watchlist_F103ListBox.DataSource = this.watchlist_F103BindingSource;
-            this.watchlist_F103ListBox.DisplayMember = "reportfilename";
-            this.watchlist_F103ListBox.FormattingEnabled = true;
-            this.watchlist_F103ListBox.ItemHeight = 17;
-            this.watchlist_F103ListBox.Location = new System.Drawing.Point(1018, 32);
-            this.watchlist_F103ListBox.Name = "watchlist_F103ListBox";
-            this.watchlist_F103ListBox.Size = new System.Drawing.Size(263, 225);
-            this.watchlist_F103ListBox.TabIndex = 30;
-            this.watchlist_F103ListBox.ValueMember = "reportfilename";
-            this.watchlist_F103ListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.Watchlist_F103ListBox_DragDrop);
-            this.watchlist_F103ListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.Watchlist_F103ListBox_DragEnter);
-            this.watchlist_F103ListBox.DoubleClick += new System.EventHandler(this.Watchlist_F103ListBox_DoubleClick);
             // 
             // FileNameTextBox2
             // 
@@ -607,10 +583,10 @@
             // 
             // filenameTextBox1
             // 
-            this.filenameTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.filenameTextBox1.BackColor = System.Drawing.Color.Black;
             this.filenameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.filenameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.watchlist_FileBindingSource2, "Filename", true));
-            this.filenameTextBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.filenameTextBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.filenameTextBox1.Location = new System.Drawing.Point(101, 283);
             this.filenameTextBox1.Name = "filenameTextBox1";
             this.filenameTextBox1.Size = new System.Drawing.Size(47, 17);
@@ -758,102 +734,8 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.watchlist_MasterDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.watchlist_MasterDataGridView.RowTemplate.Height = 21;
-            this.watchlist_MasterDataGridView.Size = new System.Drawing.Size(1284, 316);
+            this.watchlist_MasterDataGridView.Size = new System.Drawing.Size(1284, 294);
             this.watchlist_MasterDataGridView.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ListID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 56;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Priolity";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Priority";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ShipID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ShipID";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ShipName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ShipName";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 98;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Kind";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Kind";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 61;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Machinery";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Machinery";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 98;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Subject";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Subject";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 81;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "DateCom";
-            this.dataGridViewTextBoxColumn8.HeaderText = "DateCom";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 93;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "DateComp";
-            this.dataGridViewTextBoxColumn9.HeaderText = "DateComp";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 101;
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewCheckBoxColumn2.DataPropertyName = "Bitspare";
-            this.dataGridViewCheckBoxColumn2.HeaderText = "Closed";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.Width = 56;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "DateClosed";
-            this.dataGridViewTextBoxColumn10.HeaderText = "DateClosed";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 106;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Update";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 79;
             // 
             // mainMenu1
             // 
@@ -873,13 +755,155 @@
             this.menuItem2.Text = "ReadMe";
             this.menuItem2.Click += new System.EventHandler(this.MenuItem2_Click);
             // 
+            // watchlist_F103ListBox
+            // 
+            this.watchlist_F103ListBox.AllowDrop = true;
+            this.watchlist_F103ListBox.DataSource = this.fKWatchlistF103WatchlistMasterBindingSource3;
+            this.watchlist_F103ListBox.FormattingEnabled = true;
+            this.watchlist_F103ListBox.ItemHeight = 17;
+            this.watchlist_F103ListBox.Location = new System.Drawing.Point(1018, 32);
+            this.watchlist_F103ListBox.Name = "watchlist_F103ListBox";
+            this.watchlist_F103ListBox.Size = new System.Drawing.Size(263, 225);
+            this.watchlist_F103ListBox.TabIndex = 30;
+            this.watchlist_F103ListBox.ValueMember = "reportfilename";
+            this.watchlist_F103ListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.Watchlist_F103ListBox_DragDrop);
+            this.watchlist_F103ListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.Watchlist_F103ListBox_DragEnter);
+            this.watchlist_F103ListBox.DoubleClick += new System.EventHandler(this.Watchlist_F103ListBox_DoubleClick);
+            // 
+            // watchlist_dwgBindingSource1
+            // 
+            this.watchlist_dwgBindingSource1.DataMember = "FK_Watchlist_dwg_Watchlist_Master";
+            this.watchlist_dwgBindingSource1.DataSource = this.watchlist_MasterBindingSource;
+            // 
+            // watchlist_FileBindingSource2
+            // 
+            this.watchlist_FileBindingSource2.DataMember = "FK_Watchlist_File_Watchlist_Master";
+            this.watchlist_FileBindingSource2.DataSource = this.watchlist_MasterBindingSource1;
+            this.watchlist_FileBindingSource2.CurrentChanged += new System.EventHandler(this.watchlist_FileBindingSource2_CurrentChanged);
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Remark";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Update";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 79;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "DateClosed";
+            this.dataGridViewTextBoxColumn10.HeaderText = "DateClosed";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 106;
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewCheckBoxColumn2.DataPropertyName = "Bitspare";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "Closed";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.Width = 56;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "DateComp";
+            this.dataGridViewTextBoxColumn9.HeaderText = "DateComp";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 101;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "DateCom";
+            this.dataGridViewTextBoxColumn8.HeaderText = "DateCom";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 93;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Subject";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Subject";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 81;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Machinery";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Machinery";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Kind";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Kind";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 61;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ShipName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ShipName";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ShipID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ShipID";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Priolity";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Priority";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ListID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 56;
+            // 
+            // aZUREDBDataSet11
+            // 
+            this.aZUREDBDataSet11.DataSetName = "AZUREDBDataSet1";
+            this.aZUREDBDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // watchlist_F103TableAdapter1
+            // 
+            this.watchlist_F103TableAdapter1.ClearBeforeFill = true;
+            // 
+            // watchlistF103BindingSource
+            // 
+            this.watchlistF103BindingSource.DataSource = this.watchlist_MasterBindingSource1;
+            // 
+            // watchlist_F103BindingSource
+            // 
+            this.watchlist_F103BindingSource.DataSource = this.watchlist_MasterBindingSource1;
+            // 
+            // fKWatchlistF103WatchlistMasterBindingSource3
+            // 
+            this.fKWatchlistF103WatchlistMasterBindingSource3.DataMember = "FK_Watchlist_F103_Watchlist_Master";
+            this.fKWatchlistF103WatchlistMasterBindingSource3.DataSource = this.watchlist_MasterBindingSource1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(1284, 720);
+            this.ClientSize = new System.Drawing.Size(1284, 698);
             this.Controls.Add(this.watchlist_MasterDataGridView);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -903,13 +927,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_MasterDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_dwgBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_FileBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlistF103BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watchlist_F103BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKWatchlistF103WatchlistMasterBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -929,10 +956,8 @@
         private System.Windows.Forms.BindingSource watchlist_FileBindingSource;
         private AZUREDBDataSetTableAdapters.Watchlist_FileTableAdapter watchlist_dwgBindingSource2TableAdapter;
         private System.Windows.Forms.BindingSource watchlist_FileBindingSource1;
-        private System.Windows.Forms.BindingSource watchlist_dwgBindingSource1;
         private System.Windows.Forms.BindingSource watchlist_MasterBindingSource1;
         private System.Windows.Forms.BindingSource watchlist_dwgBindingSource2;
-        private System.Windows.Forms.BindingSource watchlist_FileBindingSource2;
         private System.Windows.Forms.ListBox watchlist_FileListBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
@@ -949,9 +974,7 @@
         private System.Windows.Forms.RadioButton InProgressButton;
         private System.Windows.Forms.RadioButton ClosedButton;
         private System.Windows.Forms.RadioButton ALLButton3;
-        private System.Windows.Forms.BindingSource watchlist_F103BindingSource;
         private AZUREDBDataSetTableAdapters.Watchlist_F103TableAdapter watchlist_F103TableAdapter;
-        private System.Windows.Forms.ListBox watchlist_F103ListBox;
         private System.Windows.Forms.TextBox reportfilenameTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Delete3;
@@ -976,6 +999,9 @@
         private System.Windows.Forms.MenuItem menuItem1;
         private System.Windows.Forms.MenuItem menuItem2;
         private System.Windows.Forms.ListBox watchlist_dwgListBox;
+        private System.Windows.Forms.BindingSource watchlist_FileBindingSource2;
+        private System.Windows.Forms.ListBox watchlist_F103ListBox;
+        private System.Windows.Forms.BindingSource watchlist_dwgBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -988,6 +1014,11 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private AZUREDBDataSet1 aZUREDBDataSet11;
+        private AZUREDBDataSet1TableAdapters.Watchlist_F103TableAdapter watchlist_F103TableAdapter1;
+        private System.Windows.Forms.BindingSource watchlistF103BindingSource;
+        private System.Windows.Forms.BindingSource watchlist_F103BindingSource;
+        private System.Windows.Forms.BindingSource fKWatchlistF103WatchlistMasterBindingSource3;
     }
 }
 

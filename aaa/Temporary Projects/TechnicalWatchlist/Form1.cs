@@ -34,6 +34,9 @@ namespace TechnicalWatchlist
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'aZUREDBDataSet11.Watchlist_F103' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.watchlist_F103TableAdapter1.Fill(this.aZUREDBDataSet11.Watchlist_F103);
+
 
             // TODO: このコード行はデータを 'aZUREDBDataSet1.Watchlist_F103' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.watchlist_F103TableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_F103);
@@ -309,7 +312,9 @@ namespace TechnicalWatchlist
             // TODO: このコード行はデータを 'aZUREDBDataSet.Watchlist_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.watchlist_MasterTableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_Master);
 
+            this.watchlist_F103TableAdapter1.Fill(this.aZUREDBDataSet11.Watchlist_F103);
             this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet1.Ship_Master_TB);
+            this.watchlist_F103TableAdapter.Fill(this.aZUREDBDataSet1.Watchlist_F103);
         }
 
         private void UploadWithFileDialog_Click(object sender, EventArgs e)
@@ -433,7 +438,7 @@ namespace TechnicalWatchlist
 
                     string datestring = DateTime.Now.ToString("yyyyMMddHHmmss");
                     string filenameblob = string.Format(datestring + filenamefn);
-                    watchlist_F103BindingSource.AddNew();
+                    fKWatchlistF103WatchlistMasterBindingSource3.AddNew();
                     reportfilenameTextBox.Text = filenameblob;
 
                     CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenameblob);
@@ -441,9 +446,8 @@ namespace TechnicalWatchlist
 
                     // save 
                     this.Validate();
-                    this.watchlist_F103BindingSource.EndEdit();
-                    this.watchlist_F103TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_F103);
-
+                    this.fKWatchlistF103WatchlistMasterBindingSource3.EndEdit();
+                    this.watchlist_F103TableAdapter.Update(aZUREDBDataSet1.Watchlist_F103);
                 }
             }
 
@@ -515,7 +519,7 @@ namespace TechnicalWatchlist
 
             var fileStream = System.IO.File.OpenRead(fileName[0]);
 
-            watchlist_F103BindingSource.AddNew();
+            fKWatchlistF103WatchlistMasterBindingSource3.AddNew();
 
             reportfilenameTextBox.Text = filenameblob;
 
@@ -526,7 +530,7 @@ namespace TechnicalWatchlist
 
             // save 
             this.Validate();
-            this.watchlist_F103BindingSource.EndEdit();
+            this.fKWatchlistF103WatchlistMasterBindingSource3.EndEdit();
             this.watchlist_F103TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_F103);
         }
 
@@ -659,10 +663,10 @@ namespace TechnicalWatchlist
                 {
                     blockBlob_delete.Delete();
 
-                    watchlist_F103BindingSource.RemoveCurrent();
+                    watchlistF103BindingSource.RemoveCurrent();
 
                     this.Validate();
-                    this.watchlist_F103BindingSource.EndEdit();
+                    this.fKWatchlistF103WatchlistMasterBindingSource3.EndEdit();
                     this.watchlist_F103TableAdapter.Update(this.aZUREDBDataSet1.Watchlist_F103);
 
                 }
@@ -763,6 +767,11 @@ namespace TechnicalWatchlist
         private void MenuItem2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void watchlist_FileBindingSource2_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
